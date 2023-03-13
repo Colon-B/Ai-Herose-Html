@@ -1,0 +1,69 @@
+// 사용하는 폰트
+$font : "Pretendard Variable"; // 기본폰트
+
+// 컬러셋
+$colPrimary : #00FF85;
+$colSub : #0BB899;
+$colSub2 : #C5FFEA;
+$colError : #DF2E47;
+$colGrey : #D6D6D6;
+$colBg : #F6F6F6;
+$colLine : #eee;
+
+// 텍스트
+$textCol1 : #333;
+$textCol2 : #666;
+$textCol3 : #999;
+$textCol4 : #ddd;
+
+$pc:1060px;
+
+// 모바일
+@mixin m{
+	@media (max-width: 1024px) {
+		@content
+	}
+}
+
+/**********
+텍스트 말줄임
+***********/
+@mixin text_ellipsis {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	word-wrap: normal;
+	width: 100%;
+	max-width:100%;
+}
+
+@mixin text_ellipsis_multi($line,$lh) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical;
+	word-wrap: break-word;
+	line-height: #{$lh}px;
+	height: #{$lh * $line}px;
+	max-width: 100%;
+}
+
+
+/**********
+아이콘
+***********/
+@mixin ic($name , $w , $h) {
+	$url: "../images/icon/#{$name}.svg";
+	background-image: url($url);
+	background-repeat: no-repeat;
+	background-position:center;
+	width: #{$w}px;
+	height: #{$h}px;
+}
+
+@mixin gradient() {
+	background: linear-gradient(to bottom right, #00FF85, #0A7AFF);
+	color: transparent;
+	-webkit-background-clip: text;
+}

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<meta
+		content="text/html;charset=utf-8"
+		http-equiv="Content-Type"
+	/>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+	<meta
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+		name="viewport"
+	/>
+	<head>
+		<meta charset="UTF-8" />
+		<title>ai 히어로즈</title>
+		<link
+			href="./css/reset.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link
+			href="./css/common.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link
+			href="./css/style.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link rel="stylesheet" href="./css/datepicker.css" />
+		<script src="./js/datepicker.js"></script>
+		<link rel="stylesheet" href="./css/slimselect.css" />
+		<script src="./js/slimselect.min.js"></script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-wrap">
+				<div class="left">
+					<button
+						type="button"
+						class="btn header-logo"
+					></button>
+					<ul class="header-menu">
+						<li class="header-menu--item">
+							<button type="button" class="btn">
+								AI 프로젝트
+							</button>
+						</li>
+						<li class="header-menu--item">
+							<button type="button" class="btn">
+								히어로즈
+							</button>
+						</li>
+						<li class="header-menu--item">
+							<button type="button" class="btn">
+								커뮤니티
+							</button>
+						</li>
+						<li class="header-menu--item">
+							<button type="button" class="btn beta">
+								솔루션 스토어
+							</button>
+						</li>
+					</ul>
+				</div>
+				<div class="right">
+					<button type="button" class="btn alarm"></button>
+					<button type="button" class="btn profile active">
+						<div class="image-wrap">
+							<div class="image">
+								<img src="" alt="" />
+							</div>
+							<span class="grade type-1"></span>
+						</div>
+						<div class="text-wrap">
+							<span class="badge badge-sm grey2"
+								>클라이언트</span
+							>
+							<p>
+								<span class="name">홍길동최고홍길동</span>님
+							</p>
+						</div>
+					</button>
+					<div class="my-menu">
+						<button type="button" class="btn menu guide">
+							프로필 수정
+							<span class="text"
+								>히어로즈로 등록해 보세요!</span
+							>
+						</button>
+						<button type="button" class="btn menu c">
+							AI 프로젝트 관리
+						</button>
+						<button type="button" class="btn menu">
+							정산 관리
+						</button>
+						<button type="button" class="btn menu">
+							개인정보 수정
+						</button>
+						<button type="button" class="btn menu">
+							고객센터
+						</button>
+						<button type="button" class="btn bottom">
+							로그아웃
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="section">
+				<div class="mypage-tab">
+					<button type="button" class="btn">프로필</button>
+					<button type="button" class="btn c active">
+						AI 프로젝트 관리
+					</button>
+					<button type="button" class="btn h">
+						AI 프로젝트 관리
+					</button>
+					<button type="button" class="btn">
+						정산 관리
+					</button>
+				</div>
+				<div class="mypage-con">
+					<button type="button" class="btn top-back mb-20">
+						리스트로 돌아가기
+					</button>
+					<div class="mypage-tit text">
+						교육 콘텐츠 OCR 프로젝트
+					</div>
+					<div class="mypage-state">
+						<div class="left">
+							<div class="tab-btn">
+								<button type="button" class="btn">
+									기본 정보
+								</button>
+								<div class="tooltip guide top">
+									<button
+										type="button"
+										class="btn active new"
+									>
+										메시지
+									</button>
+								</div>
+							</div>
+							<div class="tab-con">
+								<div class="message-wrap">
+									<div class="message-guide">
+										※ 원할한 프로젝트 운영을 위해<br />
+										담당 매니저가 메시지 내역을 확인할 수
+										있어요.
+									</div>
+									<button
+										type="button"
+										class="btn btn-history"
+									>
+										이전 메시지 보기
+									</button>
+									<div class="message-left">
+										<div class="box">
+											이 프로젝트의 정확한 기간은 어느 정도
+											되나요?
+										</div>
+										<div class="date">
+											YYYY-MM-DD HH:MM<span
+												class="state read"
+												>읽음</span
+											>
+										</div>
+									</div>
+									<div class="message-right">
+										<div class="box">
+											현재는 1~3개월 사이로 예상하고
+											있습니다.<br />다만...
+										</div>
+										<div class="date">
+											<span class="state read">읽음</span
+											>YYYY-MM-DD
+										</div>
+									</div>
+									<div class="message-left">
+										<div class="box">네</div>
+										<div class="date">
+											YYYY-MM-DD HH:MM<span class="state"
+												>안읽음</span
+											>
+										</div>
+									</div>
+								</div>
+								<div class="message-input">
+									<input
+										type="text"
+										class="input-text"
+										placeholder="메시지를 입력하세요."
+									/>
+									<button
+										type="button"
+										class="btn btn-black btn-sm type2"
+									>
+										전송
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="right">
+							<div class="state">
+								<div class="state-1 active">등록 단계</div>
+								<div class="state-2 active">매칭 진행</div>
+								<div class="state-3 active">
+									프로젝트 진행
+								</div>
+								<div class="state-4 active">최종 완료</div>
+								<div class="state-5 active">
+									AI 모델 검증
+								</div>
+							</div>
+							<div class="state-guide">
+								<div class="icon type-check"></div>
+								<div class="text">
+									프로젝트가 최종 완료되었어요.
+									<p class="sub type2">
+										담당 히어로즈 ㅣ 알파고<br />
+										총 진행기간 ㅣ 2022-12-22 ~ 2022-12-31
+									</p>
+								</div>
+								<div class="review-input">
+									<div class="rate">
+										<button
+											type="button"
+											class="btn btn-star active"
+										></button>
+										<button
+											type="button"
+											class="btn btn-star active"
+										></button>
+										<button
+											type="button"
+											class="btn btn-star active"
+										></button>
+										<button
+											type="button"
+											class="btn btn-star active"
+										></button>
+										<button
+											type="button"
+											class="btn btn-star"
+										></button>
+									</div>
+									<textarea
+										class="input-textarea"
+										placeholder="여러분의 소중한 의견은 히어로즈에게 큰 힘이 됩니다."
+									></textarea>
+								</div>
+								<button
+									type="button"
+									class="btn btn-lg btn-black type2"
+								>
+									리뷰 등록하기
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer-wrap">
+				<div class="footer-logo"></div>
+				<div class="footer-info">
+					<div class="footer-menu">
+						<button type="button" class="btn">
+							기업소개
+						</button>
+						<button type="button" class="btn">
+							이용약관
+						</button>
+						<button type="button" class="btn">
+							개인정보처리방침
+						</button>
+						<button type="button" class="btn">
+							고객센터
+						</button>
+					</div>
+					<div class="text">
+						(주)알체라(대표이사:황영규) | 경기도 성남시
+						분당구 판교로256번길 25 GB2빌딩 C동 7층<br />
+						통신판매업신고 : 2018-성남분당-0205 |
+						사업자등록번호: 643-87-00337
+					</div>
+					<div class="text">ⓒ 2023 Alchera Inc.</div>
+				</div>
+				<div class="footer-sns">
+					<button type="button" class="btn sns-1"></button>
+					<button type="button" class="btn sns-2"></button>
+					<button type="button" class="btn sns-3"></button>
+				</div>
+			</div>
+		</div>
+		<div class="modal show">
+			<div class="modal-dim"></div>
+			<div class="modal-con message">
+				<div class="text">
+					<p class="strong">리뷰 등록 완료</p>
+					소중한 의견 감사드려요!
+				</div>
+				<div class="btn-wrap">
+					<button
+						type="button"
+						class="btn btn-lg btn-primary"
+					>
+						확인
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<script></script>
+	</body>
+</html>
