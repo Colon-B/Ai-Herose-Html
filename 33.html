@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport">
+<head>
+    <meta charset="UTF-8">
+    <title>ai 히어로즈</title>
+    <link href="./css/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="./css/datepicker.css" />
+    <script src="./js/datepicker.js"></script>
+    <link rel="stylesheet" href="./css/slimselect.css" />
+    <script src="./js/slimselect.min.js"></script>
+</head>
+<body>
+
+<div class="header">
+    <div class="header-wrap">
+        <div class="left">
+            <button type="button" class="btn header-logo"></button>
+            <ul class="header-menu">
+                <li class="header-menu--item">
+                    <button type="button" class="btn">AI 프로젝트</button>
+                </li>
+                <li class="header-menu--item">
+                    <button type="button" class="btn active">히어로즈</button>
+                </li>
+                <li class="header-menu--item">
+                    <button type="button" class="btn">커뮤니티</button>
+                </li>
+                <li class="header-menu--item">
+                    <button type="button" class="btn beta">솔루션 스토어</button>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="tooltip guide bottom">
+                <button type="button" class="btn btn-md btn-black type3">히어로즈 등록</button>
+            </div>
+            <button type="button" class="btn alarm"></button>
+            <button type="button" class="btn profile">
+                <div class="image-wrap">
+                    <div class="image">
+                        <img src="" alt="" />
+                    </div>
+                    <span class="grade type-1"></span>
+                </div>
+                <div class="text-wrap">
+                    <span class="badge badge-sm grey2">클라이언트</span>
+                    <p><span class="name">홍길동최고홍길동</span>님</p>
+                </div>
+            </button>
+            <div class="my-menu">
+                <button type="button" class="btn menu guide">
+                    프로필 수정
+                    <span class="text">히어로즈로 등록해 보세요!</span>
+                </button>
+                <button type="button" class="btn menu c">AI 프로젝트 관리</button>
+                <button type="button" class="btn menu">정산 관리</button>
+                <button type="button" class="btn menu">개인정보 수정</button>
+                <button type="button" class="btn menu">고객센터</button>
+                <button type="button" class="btn bottom">로그아웃</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="section">
+        <div class="mt-40">
+            <button type="button" class="btn btn-md btn-black type2 link">히어로즈 등록하기</button>
+        </div>
+        <div class="mypage-tit mt-40"><img src="./images/icon/fire_color.svg" alt="" class="top">AI POWER ON&nbsp;<span class="txt-c--blue">BEST 히어로즈</span></div>
+        <div class="mypage-tit--sub">이번 주 가장 뜨거웠던 TOPIC 중 답변으로 채택되고, 가장 많은 공감을 받은 히어로즈예요.</div>
+        <ul class="text-list type4">
+            <li class="text-list--item top">
+                <div class="col">
+                    <label class="label">히어로즈 이름</label>
+                </div>
+                <div class="col">
+                    <label class="label">카테고리</label>
+                </div>
+                <div class="col">
+                    <label class="label">토픽 제목</label>
+                </div>
+                <div class="col">
+                    <label class="label">히어로즈 답변</label>
+                </div>
+                <div class="col">
+                    <label class="label">받은 공감 수</label>
+                </div>
+                <div class="col">
+                </div>
+            </li>
+            <li class="text-list--item">
+                <div class="col">
+                    <span class="text name">허균허균허균허균</span>
+                    <span class="grade type-5"></span>
+                </div>
+                <div class="col">
+                    <span class="badge badge-sm primary">머신러닝</span>
+                </div>
+                <div class="col">
+                    <span class="text"><span class="ellipsis">딥러닝과 신경망의 차이 길어지면 말줄임 처리됩니다</span></span>
+                </div>
+                <div class="col">
+                    <span class="text"><strong class="ellipsis">머신러닝은 인공지능(AI)의 하위 집합입니다. 학습과 개선을 길어지면 말줄임 처리됩니다</strong></span>
+                </div>
+                <div class="col">
+                    <span class="text like">892개</span>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-profile">히어로즈 프로필 보기</button>
+                </div>
+            </li>
+            <li class="text-list--item">
+                <div class="col">
+                    <span class="text name">허균</span>
+                    <span class="grade type-4"></span>
+                </div>
+                <div class="col">
+                    <span class="badge badge-sm primary">딥러닝</span>
+                </div>
+                <div class="col">
+                    <span class="text"><span class="ellipsis">딥러닝과 신경망의 차이 길어지면 말줄임 처리됩니다</span></span>
+                </div>
+                <div class="col">
+                    <span class="text"><strong class="ellipsis">머신러닝은 인공지능(AI)의 하위 집합입니다. 학습과 개선을 길어지면 말줄임 처리됩니다</strong></span>
+                </div>
+                <div class="col">
+                    <span class="text like">892개</span>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-profile">히어로즈 프로필 보기</button>
+                </div>
+            </li>
+            <li class="text-list--item">
+                <div class="col">
+                    <span class="text name">허균</span>
+                    <span class="grade type-3"></span>
+                </div>
+                <div class="col">
+                    <span class="badge badge-sm primary">딥러닝</span>
+                </div>
+                <div class="col">
+                    <span class="text"><span class="ellipsis">딥러닝과 신경망의 차이 길어지면 말줄임 처리됩니다</span></span>
+                </div>
+                <div class="col">
+                    <span class="text"><strong class="ellipsis">머신러닝은 인공지능(AI)의 하위 집합입니다. 학습과 개선을 길어지면 말줄임 처리됩니다</strong></span>
+                </div>
+                <div class="col">
+                    <span class="text like">892개</span>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-profile">히어로즈 프로필 보기</button>
+                </div>
+            </li>
+            <li class="text-list--item">
+                <div class="col">
+                    <span class="text name">허균</span>
+                    <span class="grade type-2"></span>
+                </div>
+                <div class="col">
+                    <span class="badge badge-sm primary">딥러닝</span>
+                </div>
+                <div class="col">
+                    <span class="text"><span class="ellipsis">딥러닝과 신경망의 차이 길어지면 말줄임 처리됩니다</span></span>
+                </div>
+                <div class="col">
+                    <span class="text"><strong class="ellipsis">머신러닝은 인공지능(AI)의 하위 집합입니다. 학습과 개선을 길어지면 말줄임 처리됩니다</strong></span>
+                </div>
+                <div class="col">
+                    <span class="text like">892개</span>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-profile">히어로즈 프로필 보기</button>
+                </div>
+            </li>
+            <li class="text-list--item">
+                <div class="col">
+                    <span class="text name">허균</span>
+                    <span class="grade type-1"></span>
+                </div>
+                <div class="col">
+                    <span class="badge badge-sm primary">딥러닝</span>
+                </div>
+                <div class="col">
+                    <span class="text"><span class="ellipsis">딥러닝과 신경망의 차이 길어지면 말줄임 처리됩니다</span></span>
+                </div>
+                <div class="col">
+                    <span class="text"><strong class="ellipsis">머신러닝은 인공지능(AI)의 하위 집합입니다. 학습과 개선을 길어지면 말줄임 처리됩니다</strong></span>
+                </div>
+                <div class="col">
+                    <span class="text like">892개</span>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-profile">히어로즈 프로필 보기</button>
+                </div>
+            </li>
+        </ul>
+
+        <div class="search-top mt-100">
+            <div class="count">전체 N명</div>
+            <div class="input">
+                <div class="left">
+                    <div class="select-multi">
+                        <button type="button" class="btn select" onclick="toggleActive(this)">
+                            <span class="value">AI 산업</span>
+                            <span class="all">전체</span>
+                        </button>
+                        <ul class="select-list">
+                            <li class="select-list--item top">
+                                <label class="input-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="box"></span>
+                                    <span class="text">전체</span>
+                                </label>
+                            </li>
+                            <li class="select-list--item">
+                                <label class="input-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="box"></span>
+                                    <span class="text">교육</span>
+                                </label>
+                            </li>
+                            <li class="select-list--item">
+                                <label class="input-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="box"></span>
+                                    <span class="text">서비스</span>
+                                </label>
+                            </li>
+                            <li class="select-list--item">
+                                <label class="input-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="box"></span>
+                                    <span class="text">제조, 화학, 에너지</span>
+                                </label>
+                            </li>
+                            <li class="select-list--item">
+                                <label class="input-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="box"></span>
+                                    <span class="text">자동차</span>
+                                </label>
+                            </li>
+                            <li class="select-list--item">
+                                <label class="input-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="box"></span>
+                                    <span class="text">판매, 유통</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="select-multi">
+                        <button type="button" class="btn select" onclick="toggleActive(this)">
+                            <span class="value">AI 기술</span>
+                            <span class="all">전체</span>
+                        </button>
+                        <ul class="select-list">
+                            <li class="select-list--item top">
+                                <label class="input-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="box"></span>
+                                    <span class="text">전체</span>
+                                </label>
+                            </li>
+                            <li class="select-list--item">
+                                <label class="input-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="box"></span>
+                                    <span class="text">교육</span>
+                                </label>
+                            </li>
+                            <li class="select-list--item">
+                                <label class="input-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="box"></span>
+                                    <span class="text">서비스</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <select class="input-select">
+                        <option>최신순</option>
+                        <option>견적 높은 순</option>
+                        <option>마감임박 순</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <ul class="heroes-list">
+            <li class="heroes-list--item">
+                <button type="button" class="btn btn-like active"></button>
+                <div class="top">
+                    <span class="badge badge-sm black type2">NEW</span>
+                    <span class="badge badge-sm primary">기업 히어로즈</span>
+                    <span class="badge badge-sm orange">상주</span>
+                    <span class="badge badge-sm blue-line">원격</span>
+                </div>
+                <div class="info">
+                    <span class="text name">허균</span>
+                    <span class="grade type-1"></span>
+                    <span class="rate">3.7</span>
+                </div>
+                <div class="title">딥러닝 석사 5년차 이상들만 모여있는 탄탄한 길어지면 말줄임 처리됩니다</div>
+                <div class="info2">
+                    <span class="text">경력: 8년</span>
+                    <span class="text">
+                        희망 급여: 800만 원
+                        <span class="badge badge-sm skyblue">월급</span>
+                        <span class="badge badge-sm skyblue">협의가능</span>
+                    </span>
+                </div>
+                <div class="tag">
+                    <label class="label">AI 전문 분야</label>
+                    <div class="badges">
+                        <span class="badge badge-md primary2">교육</span>
+                        <span class="badge badge-md primary2">서비스</span>
+                        <span class="badge badge-md primary2">자동차</span>
+                    </div>
+                </div>
+                <div class="tag">
+                    <label class="label">AI 보유 스킬</label>
+                    <div class="badges">
+                        <span class="badge badge-md primary2">동영상</span>
+                        <span class="badge badge-md primary2">이미지</span>
+                    </div>
+                </div>
+            </li>
+            <li class="heroes-list--item">
+                <button type="button" class="btn btn-like"></button>
+                <div class="top">
+                    <span class="badge badge-sm blue">개인 히어로즈</span>
+                    <span class="badge badge-sm blue-line">원격</span>
+                </div>
+                <div class="info">
+                    <span class="text name">허균</span>
+                    <span class="grade type-2"></span>
+                    <span class="rate">3.7</span>
+                </div>
+                <div class="title">딥러닝 석사 5년차 이상들만 모여있는 탄탄한 길어지면 말줄임 처리됩니다</div>
+                <div class="info2">
+                    <span class="text">경력: 2년</span>
+                    <span class="text">
+                        희망 급여: 300만 원
+                        <span class="badge badge-sm skyblue">월급</span>
+                    </span>
+                </div>
+                <div class="tag">
+                    <label class="label">AI 전문 분야</label>
+                    <div class="badges">
+                        <span class="badge badge-md primary2">교육</span>
+                        <span class="badge badge-md primary2">서비스</span>
+                        <span class="badge badge-md primary2">자동차</span>
+                    </div>
+                </div>
+                <div class="tag">
+                    <label class="label">AI 보유 스킬</label>
+                    <div class="badges">
+                        <span class="badge badge-md primary2">동영상</span>
+                        <span class="badge badge-md primary2">이미지</span>
+                    </div>
+                </div>
+            </li>
+            <li class="heroes-list--item">
+                <button type="button" class="btn btn-like"></button>
+                <div class="top">
+                    <span class="badge badge-sm blue">개인 히어로즈</span>
+                    <span class="badge badge-sm blue-line">원격</span>
+                </div>
+                <div class="info">
+                    <span class="text name">허균</span>
+                    <span class="grade type-2"></span>
+                    <span class="rate">3.7</span>
+                </div>
+                <div class="title">딥러닝 석사 5년차 이상들만 모여있는 탄탄한 길어지면 말줄임 처리됩니다</div>
+                <div class="info2">
+                    <span class="text">경력: 2년</span>
+                    <span class="text">
+                        희망 급여: 300만 원
+                        <span class="badge badge-sm skyblue">월급</span>
+                    </span>
+                </div>
+                <div class="tag">
+                    <label class="label">AI 전문 분야</label>
+                    <div class="badges">
+                        <span class="badge badge-md primary2">교육</span>
+                        <span class="badge badge-md primary2">서비스</span>
+                        <span class="badge badge-md primary2">자동차</span>
+                    </div>
+                </div>
+                <div class="tag">
+                    <label class="label">AI 보유 스킬</label>
+                    <div class="badges">
+                        <span class="badge badge-md primary2">동영상</span>
+                        <span class="badge badge-md primary2">이미지</span>
+                    </div>
+                </div>
+            </li>
+            <li class="heroes-list--item">
+                <button type="button" class="btn btn-like"></button>
+                <div class="top">
+                    <span class="badge badge-sm blue">개인 히어로즈</span>
+                    <span class="badge badge-sm blue-line">원격</span>
+                </div>
+                <div class="info">
+                    <span class="text name">허균</span>
+                    <span class="grade type-2"></span>
+                    <span class="rate">3.7</span>
+                </div>
+                <div class="title">딥러닝 석사 5년차 이상들만 모여있는 탄탄한 길어지면 말줄임 처리됩니다</div>
+                <div class="info2">
+                    <span class="text">경력: 2년</span>
+                    <span class="text">
+                        희망 급여: 300만 원
+                        <span class="badge badge-sm skyblue">월급</span>
+                    </span>
+                </div>
+                <div class="tag">
+                    <label class="label">AI 전문 분야</label>
+                    <div class="badges">
+                        <span class="badge badge-md primary2">교육</span>
+                        <span class="badge badge-md primary2">서비스</span>
+                        <span class="badge badge-md primary2">자동차</span>
+                    </div>
+                </div>
+                <div class="tag">
+                    <label class="label">AI 보유 스킬</label>
+                    <div class="badges">
+                        <span class="badge badge-md primary2">동영상</span>
+                        <span class="badge badge-md primary2">이미지</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="pagination">
+            <li class="pagination-item arrow first"><button type="button" class="btn"></button></li>
+            <li class="pagination-item arrow prev"><button type="button" class="btn"></button></li>
+            <li class="pagination-item">
+                <button type="button" class="btn active">1</button>
+                <button type="button" class="btn">2</button>
+                <button type="button" class="btn">3</button>
+            </li>
+            <li class="pagination-item arrow next"><button type="button" class="btn"></button></li>
+            <li class="pagination-item arrow last"><button type="button" class="btn"></button></li>
+        </ul>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-wrap">
+        <div class="footer-logo"></div>
+        <div class="footer-info">
+            <div class="footer-menu">
+                <button type="button" class="btn">기업소개</button>
+                <button type="button" class="btn">이용약관</button>
+                <button type="button" class="btn">개인정보처리방침</button>
+                <button type="button" class="btn">고객센터</button>
+            </div>
+            <div class="text">
+                (주)알체라(대표이사:황영규) | 경기도 성남시 분당구 판교로256번길 25 GB2빌딩 C동 7층<br />
+                통신판매업신고  : 2018-성남분당-0205 | 사업자등록번호: 643-87-00337
+            </div>
+            <div class="text">
+                ⓒ 2023 Alchera Inc.
+            </div>
+        </div>
+        <div class="footer-sns">
+            <button type="button" class="btn sns-1"></button>
+            <button type="button" class="btn sns-2"></button>
+            <button type="button" class="btn sns-3"></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    var selects = document.getElementsByClassName('input-select')
+    for( var i = 0; i < selects.length; i++ ){
+        new SlimSelect({
+            select: document.getElementsByClassName('input-select')[i]
+        })
+    }
+    function toggleActive(event){
+        event.classList.contains('active') ? event.classList.remove('active') : event.classList.add('active')
+    }
+</script>
+
+</body>
+</html>

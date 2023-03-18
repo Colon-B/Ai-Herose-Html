@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport">
+<head>
+    <meta charset="UTF-8">
+    <title>ai 히어로즈</title>
+    <link href="./css/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="./css/datepicker.css" />
+    <script src="./js/datepicker.js"></script>
+    <link rel="stylesheet" href="./css/slimselect.css" />
+    <script src="./js/slimselect.min.js"></script>
+</head>
+<body>
+
+<div class="header">
+    <div class="header-wrap">
+        <div class="left">
+            <button type="button" class="btn header-logo"></button>
+            <ul class="header-menu">
+                <li class="header-menu--item">
+                    <button type="button" class="btn active">AI 프로젝트</button>
+                </li>
+                <li class="header-menu--item">
+                    <button type="button" class="btn">히어로즈</button>
+                </li>
+                <li class="header-menu--item">
+                    <button type="button" class="btn">커뮤니티</button>
+                </li>
+                <li class="header-menu--item">
+                    <button type="button" class="btn beta">솔루션 스토어</button>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="tooltip guide bottom">
+                <button type="button" class="btn btn-md btn-black type3">히어로즈 등록</button>
+            </div>
+            <button type="button" class="btn alarm"></button>
+            <button type="button" class="btn profile">
+                <div class="image-wrap">
+                    <div class="image">
+                        <img src="" alt="" />
+                    </div>
+                    <span class="grade type-1"></span>
+                </div>
+                <div class="text-wrap">
+                    <span class="badge badge-sm grey2">클라이언트</span>
+                    <p><span class="name">홍길동최고홍길동</span>님</p>
+                </div>
+            </button>
+            <div class="my-menu">
+                <button type="button" class="btn menu guide">
+                    프로필 수정
+                    <span class="text">히어로즈로 등록해 보세요!</span>
+                </button>
+                <button type="button" class="btn menu c">AI 프로젝트 관리</button>
+                <button type="button" class="btn menu">정산 관리</button>
+                <button type="button" class="btn menu">개인정보 수정</button>
+                <button type="button" class="btn menu">고객센터</button>
+                <button type="button" class="btn bottom">로그아웃</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="section">
+        <div class="request-top">
+            <strong>AI 프로젝트 의뢰</strong>
+            <p>
+                AI 프로젝트를 의뢰하면 담당 매니저가 내용을 검토 후 등록해 드리고 있어요.<br />
+                의뢰서 작성에 어려움이 있다면 아래의 버튼을 눌러 매니저에게 도움을 요청하세요.
+            </p>
+            <label class="input-checkbox">
+                <input type="checkbox" />
+                <span class="box"></span>
+                <span class="text">매니저의 도움이 필요하신가요?</span>
+            </label>
+        </div>
+        <div class="section-tit">기본 정보</div>
+        <div class="col-2">
+            <div>
+                <div class="input-wrap">
+                    <label class="input-label">담당자</label>
+                    <input type="text" class="input-text" value="허균" readonly="">
+                </div>
+                <div class="input-wrap">
+                    <label class="input-label">연락처</label>
+                    <input type="text" class="input-text" value="01023456789" readonly="">
+                </div>
+            </div>
+            <div class="ml-20">
+                <div class="input-wrap">
+                    <label class="input-label">이메일</label>
+                    <input type="text" class="input-text" value="ai_heroes@aiheroes.ai" readonly="">
+                </div>
+                <div class="input-wrap">
+                    <label class="input-label">닉네임</label>
+                    <input type="text" class="input-text" value="홍길동" readonly="">
+                </div>
+            </div>
+        </div>
+        <div class="section-tit mt-100">AI 프로젝트 정보</div>
+        <div class="col-2">
+            <div>
+                <div class="input-wrap">
+                    <label class="input-label required">
+                        규모
+                    </label>
+                    <label class="input-radio">
+                        <input type="radio" name="radio1" checked="">
+                        <span class="box">기업(사업자) 프로젝트</span>
+                    </label>
+                    <div class="col-2 mt-10">
+                        <div class="flex15">
+                            <input type="text" class="input-text" placeholder="사업자 번호를 입력해 주세요." value="1112223333">
+                        </div>
+                        <div class="ml-10">
+                            <label class="input-file">
+                                <input type="file">
+                                <span class="input-text center correct">사업자.jpg</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ml-20">
+                <div class="input-wrap">
+                    <label class="input-label">&nbsp;</label>
+                    <label class="input-radio">
+                        <input type="radio" name="radio1">
+                        <span class="box">개인 프로젝트</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+            <div>
+                <div class="col-2">
+                    <div class="input-wrap flex15">
+                        <label class="input-label required">이름</label>
+                        <input type="text" class="input-text" placeholder="이름을 입력해 주세요." />
+                    </div>
+                    <div class="ml-10">
+                        <div class="input-wrap">
+                            <div class="input-switch--wrap right-top">
+                                <span class="text">협의하기</span>
+                                <label class="input-switch">
+                                    <input type="checkbox" checked />
+                                    <span class="switch"></span>
+                                </label>
+                            </div>
+                            <label class="input-label required">기간</label>
+                            <div class="col-2">
+                                <div>
+                                    <select class="input-select">
+                                        <option>개월</option>
+                                        <option>주</option>
+                                    </select>
+                                </div>
+                                <div class="ml-10">
+                                    <div class="input-number">
+                                        <input type="text" class="input-text" placeholder="기간">
+                                        <button type="button" class="btn up"></button>
+                                        <button type="button" class="btn down"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="input-wrap flex15">
+                        <label class="input-label required">
+                            예산
+                            <span class="guide">VAT를 제외한 금액으로 책정해 주세요.</span>
+                        </label>
+                        <div class="col-2">
+                            <div>
+                                <div class="input-number">
+                                    <input type="text" class="input-text" placeholder="최소 금액 입력">
+                                    <button type="button" class="btn up"></button>
+                                    <button type="button" class="btn down"></button>
+                                </div>
+                            </div>
+                            <div class="text">~</div>
+                            <div>
+                                <div class="input-number">
+                                    <input type="text" class="input-text" placeholder="최대 금액 입력">
+                                    <button type="button" class="btn up"></button>
+                                    <button type="button" class="btn down"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-10">
+                        <div class="input-wrap">
+                            <div class="input-switch--wrap right-top">
+                                <span class="text">제안받기</span>
+                                <label class="input-switch">
+                                    <input type="checkbox" />
+                                    <span class="switch"></span>
+                                </label>
+                            </div>
+                            <label class="input-label required">급여 방식</label>
+                            <select class="input-select placeholder">
+                                <option>지급 방식 선택</option>
+                                <option>월급</option>
+                                <option>주급</option>
+                                <option>프로젝트 완료 후</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="input-wrap">
+                        <label class="input-label required">진행 방식(근무 형태)</label>
+                        <select class="input-select placeholder">
+                            <option>진행 방식을 선택해 주세요.</option>
+                            <option>상주, 원격 모두</option>
+                            <option>상주 근무</option>
+                            <option>원격 근무</option>
+                        </select>
+                    </div>
+                    <div class="ml-10">
+                        <div class="input-wrap">
+                            <label class="input-label required">의뢰 마감일</label>
+                            <input type="text" class="input-text input-date" placeholder="의뢰 마감일을 선택해 주세요." />
+                        </div>
+                    </div>
+                </div>
+                <div class="input-wrap flex15">
+                    <label class="input-label required">
+                        데이터 보유 현황
+                        <div class="guide type2">
+                            <label class="input-checkbox type2">
+                                <input type="radio" name="radio2" checked />
+                                <span class="box"></span>
+                                <span class="text">보유하고 있음</span>
+                            </label>
+                            <label class="input-checkbox type2">
+                                <input type="radio" name="radio2" />
+                                <span class="box"></span>
+                                <span class="text">보유중인 데이터 없음</span>
+                            </label>
+                        </div>
+                    </label>
+                </div>
+                <div class="input-wrap">
+                    <label class="input-label required">
+                        AI 산업 분야<span class="guide">최소 1개 이상의 전문 분야를 선택해 주세요.</span>
+                    </label>
+                    <div class="input-checkbox--wrap">
+                        <label class="input-checkbox">
+                            <input type="checkbox" checked />
+                            <span class="label">교육</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" checked />
+                            <span class="label">서비스</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label">제조, 화학, 에너지</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label">자동차</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label">판매, 유통</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label">미디어, 엔터테인먼트</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label">관광, 스포츠, 레저</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label">의료, 제약, 바이오, 헬스케어</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label">금융</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label">의료, 제약, 바이오, 헬스케어</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label">IT, 통신</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label">정부, 기관</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label">식품</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label">농업</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label">게임</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label">기타</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="input-wrap">
+                    <label class="input-label required">
+                        AI 기술 분야<span class="guide">최소 1개 이상의 프로젝트 관련 분야를 선택해 주세요.</span>
+                    </label>
+                    <div class="input-checkbox--wrap">
+                        <label class="input-checkbox">
+                            <input type="checkbox" checked />
+                            <span class="label">동영상</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label">이미지</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" checked />
+                            <span class="label">음성</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label">텍스트</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label">빅데이터</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label">융합</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label">기타</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="ml-20">
+                <div class="input-wrap">
+                    <label class="input-label">상세 설명</label>
+                    <textarea class="input-textarea" placeholder="프로젝트에 대해 상세히 설명해 주세요.
+작성이 어려우실 경우 아래 기본 양식을 참고해 주세요!
+
+<기본 양식>
+1. 프로젝트 간단 소개
+
+2. 현재까지 프로젝트 진행사항
+
+3. 세부적인 업무 범위 (*모델 정확도 포함)
+
+4. 데이터 상태(*규모, 가공 유무 등) 
+
+5. 히어로즈에게 바라는 점" rows="20">
+1. 프로젝트 간단 소개
+이 글은 더미입니다.
+
+2. 현재까지 프로젝트 진행사항
+이 글은 더미입니다. 이 글은 더미입니다. 이 글은 더미입니다. 이 글은 더미입니다.
+이 글은 더미입니다.이 글은 더미입니다. 이 글은 더미입니다.
+이 글은 더미입니다.
+
+3. 세부적인 업무 범위
+이 글은 더미입니다.이 글은 더미입니다.이 글은 더미입니다.
+
+4. 히어로즈에게 바라는 점
+이 글은 더미입니다.
+                    </textarea>
+                </div>
+                <label class="input-file mt-10">
+                    <input type="file">
+                    <span class="input-text center correct">23_화면기획서_최최종2.pdf</span>
+                </label>
+            </div>
+        </div>
+        <div class="section-tit mt-100">스마트 매칭을 높여주는 정보</div>
+        <div class="col-2">
+            <div>
+                <div class="input-wrap">
+                    <label class="input-label">관심 AI 테스크 및 기술</label>
+                    <div class="input-checkbox--wrap">
+                        <label class="input-checkbox">
+                            <input type="checkbox" checked />
+                            <span class="label type2">Machine Learning</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" checked />
+                            <span class="label type2">Deep Learning</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">Classification</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">Convolution</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">CNN</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">RNN</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">CAM</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">OCR</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">STT</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">TTS</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">NLP</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">GAN</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">Deep Fake</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">Object Detection</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">Anomaly Detection</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">Segmentation</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">Multi-task</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="input-wrap">
+                    <label class="input-label">프로그래밍 프레임워크</label>
+                    <div class="input-checkbox--wrap">
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">R</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">Python</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" checked />
+                            <span class="label type2">C</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" checked />
+                            <span class="label type2">C++</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">AOS</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">iOS</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">Tensorflow</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">Keras</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">Caffe</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">CNTK</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">PyTorch</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">David</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">WebPPL</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">Church</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">Figaro</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">Pyro</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">Pyro</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">TensorForce</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="label type2">Rlib</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-wrap mt-100">
+            <button type="button" class="btn btn-lg btn-black type2">AI 프로젝트 의뢰하기</button>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-wrap">
+        <div class="footer-logo"></div>
+        <div class="footer-info">
+            <div class="footer-menu">
+                <button type="button" class="btn">기업소개</button>
+                <button type="button" class="btn">이용약관</button>
+                <button type="button" class="btn">개인정보처리방침</button>
+                <button type="button" class="btn">고객센터</button>
+            </div>
+            <div class="text">
+                (주)알체라(대표이사:황영규) | 경기도 성남시 분당구 판교로256번길 25 GB2빌딩 C동 7층<br />
+                통신판매업신고  : 2018-성남분당-0205 | 사업자등록번호: 643-87-00337
+            </div>
+            <div class="text">
+                ⓒ 2023 Alchera Inc.
+            </div>
+        </div>
+        <div class="footer-sns">
+            <button type="button" class="btn sns-1"></button>
+            <button type="button" class="btn sns-2"></button>
+            <button type="button" class="btn sns-3"></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    var selects = document.getElementsByClassName('input-select')
+    for( var i = 0; i < selects.length; i++ ){
+        new SlimSelect({
+            select: document.getElementsByClassName('input-select')[i]
+        })
+    }
+    var dates = document.getElementsByClassName('input-date')
+    for( var i = 0; i < dates.length; i++ ){
+        var datepicker = new Datepicker(dates[i], {
+            language:'ko',
+            format:'yyyy-mm-dd'
+        }); 
+    }
+    function toggleParentActive(event){
+        event.parentElement.classList.contains('active') ? event.parentElement.classList.remove('active') : event.parentElement.classList.add('active')
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport">
+<head>
+    <meta charset="UTF-8">
+    <title>ai 히어로즈</title>
+    <link href="./css/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="./css/datepicker.css" />
+    <script src="./js/datepicker.js"></script>
+    <link rel="stylesheet" href="./css/slimselect.css" />
+    <script src="./js/slimselect.min.js"></script>
+</head>
+<body>
+
+<div class="header">
+    <div class="header-wrap">
+        <div class="left">
+            <button type="button" class="btn header-logo"></button>
+            <ul class="header-menu">
+                <li class="header-menu--item">
+                    <button type="button" class="btn">AI 프로젝트</button>
+                </li>
+                <li class="header-menu--item">
+                    <button type="button" class="btn active">히어로즈</button>
+                </li>
+                <li class="header-menu--item">
+                    <button type="button" class="btn">커뮤니티</button>
+                </li>
+                <li class="header-menu--item">
+                    <button type="button" class="btn beta">솔루션 스토어</button>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="tooltip guide bottom">
+                <button type="button" class="btn btn-md btn-black type3">히어로즈 등록</button>
+            </div>
+            <button type="button" class="btn alarm"></button>
+            <button type="button" class="btn profile">
+                <div class="image-wrap">
+                    <div class="image">
+                        <img src="" alt="" />
+                    </div>
+                    <span class="grade type-1"></span>
+                </div>
+                <div class="text-wrap">
+                    <span class="badge badge-sm grey2">클라이언트</span>
+                    <p><span class="name">홍길동최고홍길동</span>님</p>
+                </div>
+            </button>
+            <div class="my-menu">
+                <button type="button" class="btn menu guide">
+                    프로필 수정
+                    <span class="text">히어로즈로 등록해 보세요!</span>
+                </button>
+                <button type="button" class="btn menu c">AI 프로젝트 관리</button>
+                <button type="button" class="btn menu">정산 관리</button>
+                <button type="button" class="btn menu">개인정보 수정</button>
+                <button type="button" class="btn menu">고객센터</button>
+                <button type="button" class="btn bottom">로그아웃</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="section">
+        <button type="button" class="btn top-back">리스트로 돌아가기</button>
+        <div class="project-detail">
+            <div class="left">
+                <div class="profile-info">
+                    <button type="button" class="btn btn-like active"></button>
+                    <div class="text">
+                        <div class="badges">
+                            <span class="badge black type2">NEW</span>
+                            <span class="badge primary">기업 히어로즈</span>
+                            <span class="badge orange">상주</span>
+                            <span class="badge blue-line">원격</span>
+                        </div>
+                        <div class="name">
+                            허균<span class="grade type-4"></span>
+                            <div class="rate">
+                                <span class="star fill"></span>
+                                <span class="star fill"></span>
+                                <span class="star fill"></span>
+                                <span class="star fill"></span>
+                                <span class="star half"></span>
+                                <span class="num">(4.7)</span>
+                            </div>
+                        </div>
+                        <div class="profile-word">“딥러닝 석사 5년차 이상들만 모여있는 탄탄한 에이전시입니다”</div>
+                        <p>
+                            희망 급여: 800만 원
+                            <span class="badge badge-sm skyblue">월급</span>
+                            <span class="badge badge-sm skyblue">협의 가능</span>
+                        </p>
+                        <p>경력: 8년</p>
+                        <p>선호 프로젝트: 기업 프로젝트</p>
+                    </div>
+                </div>
+                <div class="profile-sub">AI 키워드</div>
+                <div class="profile-badges">
+                    <div class="row">
+                        <label class="label">AI 전문 분야</label>
+                        <div class="badges">
+                            <span class="badge badge-md primary2">교육</span>
+                            <span class="badge badge-md primary2">서비스</span>
+                            <span class="badge badge-md primary2">자동차</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="label">AI 보유 스킬</label>
+                        <div class="badges">
+                            <span class="badge badge-md primary2">동영상</span>
+                            <span class="badge badge-md primary2">이미지</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="label">AI 관심사</label>
+                        <div class="badges">
+                            <span class="badge badge-md purple">Machine Learning</span>
+                            <span class="badge badge-md purple">Deep Learning</span>
+                            <span class="badge badge-md purple">Classification</span>
+                            <span class="badge badge-md purple">CNN</span>
+                            <span class="badge badge-md purple">CAM</span>
+                            <span class="badge badge-md purple">TTS</span>
+                            <span class="badge badge-md purple">R</span>
+                            <span class="badge badge-md purple">Python</span>
+                            <span class="badge badge-md purple">Figaro</span>
+                            <span class="badge badge-md purple">Rlib</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-sub">히어로즈 소개</div>
+                <div class="profile-box">
+                    현재 30% 진행된 상황이고, 영상 이미지 뿐만 아니라 추후에는 이미지 영상과 텍스트 데이터 모델도 필요합니다.<br />
+                    적극적으로 임하실 3~5년차 히어로즈분을 찾습니다. <br />
+                    현재 30% 진행된 상황이고, 영상 이미지 뿐만 아니라 추후에는 이미지 영상과 텍스트 데이터 모델도 필요합니다.<br />
+                    적극적으로 임하실 3~5년차 히어로즈분을 찾습니다. <br />
+                    현재 30% 진행된 상황이고, 영상 이미지 뿐만 아니라 추후에는 이미지 영상과 텍스트 데이터 모델도 필요합니다.
+                </div>
+                <button type="button" class="btn btn-full btn-primary btn-down">포트폴리오 다운로드</button>
+
+                <div class="profile-sub">
+                    히어로즈 리뷰 (7)
+                </div>
+                <ul class="review-list">
+                    <li class="review-list--item">
+                        <div class="top">
+                            <div class="left">
+                                <span class="name">쥐내린지단을곁들인잔치국수김치말이국수짱</span>
+                                <div class="rate">
+                                    <span class="star fill"></span>
+                                    <span class="star fill"></span>
+                                    <span class="star fill"></span>
+                                    <span class="star fill"></span>
+                                    <span class="star"></span>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <span class="date">2023-01-31 17:00</span>
+                            </div>
+                        </div>
+                        <div class="con">
+                            너무 친절하게 잘 해주셔서 감사했습니다. 다른 분에게 추천해드릴 의향 있습니다. 너무 친절하게 잘 해주셔서 감사했습니다. 다른 분에게 추천해드릴 의향 있습니다.
+                        </div>
+                        <div class="bottom">
+                            <span class="text">
+                                <strong>작업기간</strong>
+                                23-01-31 ~ 23-02-28
+                            </span>
+                            <span class="text">
+                                <strong>AI 분야</strong>
+                                의료, 제약, 바이오, 헬스케어
+                            </span>
+                            <span class="text">
+                                <strong>적용 AI 기술</strong>
+                                동영상, 이미지
+                            </span>
+                        </div>
+                    </li>
+                    <li class="review-list--item">
+                        <div class="top">
+                            <div class="left">
+                                <span class="name">쥐내린지단을곁들인잔치국수김치말이국수짱</span>
+                                <div class="rate">
+                                    <span class="star fill"></span>
+                                    <span class="star fill"></span>
+                                    <span class="star fill"></span>
+                                    <span class="star fill"></span>
+                                    <span class="star"></span>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <span class="date">2023-01-31 17:00</span>
+                            </div>
+                        </div>
+                        <div class="con">
+                            너무 친절하게 잘 해주셔서 감사했습니다. 다른 분에게 추천해드릴 의향 있습니다. 너무 친절하게 잘 해주셔서 감사했습니다. 다른 분에게 추천해드릴 의향 있습니다.
+                        </div>
+                        <div class="bottom">
+                            <span class="text">
+                                <strong>작업기간</strong>
+                                23-01-31 ~ 23-02-28
+                            </span>
+                            <span class="text">
+                                <strong>AI 분야</strong>
+                                의료, 제약, 바이오, 헬스케어
+                            </span>
+                            <span class="text">
+                                <strong>적용 AI 기술</strong>
+                                동영상, 이미지
+                            </span>
+                        </div>
+                    </li>
+                    <li class="review-list--item">
+                        <div class="top">
+                            <div class="left">
+                                <span class="name">쥐내린지단을곁들인잔치국수김치말이국수짱</span>
+                                <div class="rate">
+                                    <span class="star fill"></span>
+                                    <span class="star fill"></span>
+                                    <span class="star fill"></span>
+                                    <span class="star fill"></span>
+                                    <span class="star"></span>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <span class="date">2023-01-31 17:00</span>
+                            </div>
+                        </div>
+                        <div class="con">
+                            너무 친절하게 잘 해주셔서 감사했습니다. 다른 분에게 추천해드릴 의향 있습니다. 너무 친절하게 잘 해주셔서 감사했습니다. 다른 분에게 추천해드릴 의향 있습니다.
+                        </div>
+                        <div class="bottom">
+                            <span class="text">
+                                <strong>작업기간</strong>
+                                23-01-31 ~ 23-02-28
+                            </span>
+                            <span class="text">
+                                <strong>AI 분야</strong>
+                                의료, 제약, 바이오, 헬스케어
+                            </span>
+                            <span class="text">
+                                <strong>적용 AI 기술</strong>
+                                동영상, 이미지
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="pagination">
+                    <li class="pagination-item arrow first"><button type="button" class="btn"></button></li>
+                    <li class="pagination-item arrow prev"><button type="button" class="btn"></button></li>
+                    <li class="pagination-item">
+                        <button type="button" class="btn active">1</button>
+                        <button type="button" class="btn">2</button>
+                        <button type="button" class="btn">3</button>
+                    </li>
+                    <li class="pagination-item arrow next"><button type="button" class="btn"></button></li>
+                    <li class="pagination-item arrow last"><button type="button" class="btn"></button></li>
+                </ul>
+                <div class="btn-wrap mt-70">
+                    <button type="button" class="btn btn-lg btn-black type2">AI 프로젝트 제안하기</button>
+                </div>
+            </div>
+            <div class="right">
+                <div class="right-box">
+                    <div class="box-tit">BEST 히어로즈 <span class="txt-c--purple">추천</span></div>
+                    <ul class="project-list type2">
+                        <li class="project-list--item">
+                            <div class="tit">
+                                <div class="detail">
+                                    <span class="text name">허균</span>
+                                    <span class="grade type-1"></span>
+                                    <span class="rate">3.7</span>
+                                </div>
+                                <div class="right">
+                                    <span class="badge badge-md primary">기업 히어로즈</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span class="text">
+                                    <span class="mr-5">경력: 10년</span>
+                                    <span class="badge badge-sm orange">상주</span>
+                                    <span class="badge badge-sm blue-line">원격</span>
+                                </span>
+                            </div>
+                            <div class="info">
+                                <span class="text">
+                                    <span class="badge badge-sm skyblue">월급</span>
+                                    <span class="badge badge-sm skyblue">금액 제안 가능</span>
+                                </span>
+                            </div>
+                            <div class="option">
+                                <span class="badge badge-round grey line">NEW</span>
+                                <span class="badge badge-round grey line">기업 프로젝트</span>
+                                <span class="badge badge-round grey line">상주</span>
+                                <span class="badge badge-round grey line">원격</span>
+                                <span class="badge badge-round grey line">원격</span>
+                            </div>
+                        </li>
+                        <li class="project-list--item">
+                            <div class="tit">
+                                <div class="detail">
+                                    <span class="text name">이채린</span>
+                                    <span class="grade type-5"></span>
+                                    <span class="rate">4.2</span>
+                                </div>
+                                <div class="right">
+                                    <span class="badge badge-md blue">개인 히어로즈</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <span class="text">
+                                    <span class="mr-5">경력: 8년</span>
+                                    <span class="badge badge-sm blue-line">원격</span>
+                                </span>
+                            </div>
+                            <div class="info">
+                                <span class="text">
+                                    <span class="badge badge-sm skyblue">월급</span>
+                                    <span class="badge badge-sm skyblue">금액 제안 가능</span>
+                                </span>
+                            </div>
+                            <div class="option">
+                                <span class="badge badge-round grey line">서비스</span>
+                                <span class="badge badge-round grey line">텍스트</span>
+                                <span class="badge badge-round grey line">빅데이터</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-wrap">
+        <div class="footer-logo"></div>
+        <div class="footer-info">
+            <div class="footer-menu">
+                <button type="button" class="btn">기업소개</button>
+                <button type="button" class="btn">이용약관</button>
+                <button type="button" class="btn">개인정보처리방침</button>
+                <button type="button" class="btn">고객센터</button>
+            </div>
+            <div class="text">
+                (주)알체라(대표이사:황영규) | 경기도 성남시 분당구 판교로256번길 25 GB2빌딩 C동 7층<br />
+                통신판매업신고  : 2018-성남분당-0205 | 사업자등록번호: 643-87-00337
+            </div>
+            <div class="text">
+                ⓒ 2023 Alchera Inc.
+            </div>
+        </div>
+        <div class="footer-sns">
+            <button type="button" class="btn sns-1"></button>
+            <button type="button" class="btn sns-2"></button>
+            <button type="button" class="btn sns-3"></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    var selects = document.getElementsByClassName('input-select')
+    for( var i = 0; i < selects.length; i++ ){
+        new SlimSelect({
+            select: document.getElementsByClassName('input-select')[i]
+        })
+    }
+    function toggleParentActive(event){
+        event.parentElement.classList.contains('active') ? event.parentElement.classList.remove('active') : event.parentElement.classList.add('active')
+    }
+</script>
+
+</body>
+</html>
