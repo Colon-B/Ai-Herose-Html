@@ -26,11 +26,20 @@ body, html {
         &--primary{
             color:$colPrimary !important;
         }
+        &--sub{
+            color:$colSub !important;
+        }
         &--red{
             color:$colError !important;
         }
+        &--blue{
+            color:#0A7AFF !important;
+        }
         &--grey{
             color:$textCol3 !important;
+        }
+        &--purple{
+            color:#5712EB !important;
         }
     }
 }
@@ -54,6 +63,9 @@ body, html {
     &-40{
         margin-top:40px !important;
     }
+    &-70{
+        margin-top:70px !important;
+    }
     &-100{
         margin-top:100px !important;
     }
@@ -74,6 +86,9 @@ body, html {
 .mr{
     &-0{
         margin-right: 0 !important;
+    }
+    &-5{
+        margin-right: 5px !important;
     }
 }
 
@@ -204,6 +219,12 @@ body, html {
             &:active{
                 background-color:$textCol1;
                 color:$colSub;
+            }
+            &.link:after{
+                content:"";
+                display:block;
+                @include ic(arrow_right_active, 6, 12);
+                margin-left:6px;
             }
         }
         &.type3{
@@ -336,6 +357,11 @@ body, html {
     &.grey{
         background-color:$colBg;
         color:$textCol2;
+        &.line{
+            border:1px solid $textCol3;
+            color:$textCol3;
+            background-color: transparent;
+        }
     }
     &.grey2{
         background-color:$colGrey;
@@ -344,6 +370,9 @@ body, html {
     &.black{
         background-color:#000;
         color:#fff;
+        &.type2{
+            color:$colPrimary;
+        }
     }
     &.primary{
         background-color:$colPrimary;
@@ -355,6 +384,9 @@ body, html {
         border:1px solid #FF9D0A;
         color:#FF9D0A;
         line-height: 25px;
+        &.badge-sm{
+            line-height: 15px;
+        }
     }
     &.yellow{
         background-color:#F2DD22;
@@ -380,6 +412,9 @@ body, html {
             border:1px solid #0A7AFF;
             color:#0A7AFF;
             line-height: 25px;
+            &.badge-sm{
+                line-height: 15px;
+            }
         }
     }
     &.deepblue{
@@ -407,6 +442,15 @@ body, html {
             left:50%;
         }
         &.bottom{
+            &.right{
+                .tooltip-message{
+                    transform:translate(-80%, 100%);
+                    &:after{
+                        left: unset;
+                        right:20px;
+                    }
+                }
+            }
             .tooltip-message{
                 bottom:-15px;
                 transform:translate(-50%, 100%);
@@ -533,6 +577,9 @@ input{
         position:relative;
         max-width: 504px;
         margin:0 auto;
+        &.w-100{
+            max-width: none;
+        }
         .right-top{
             position:absolute;
             right:0;
@@ -673,6 +720,10 @@ input{
             font-weight: 400;
             color:$textCol2;
             transform: translateX(100%);
+            &.type2{
+                right:-20px;
+                top:-7px;
+            }
         }
     }
     &-text{
@@ -816,6 +867,56 @@ input{
                 }
             }
         }
+        &.type2{
+            position:relative;
+            display:inline-flex;
+            align-items: center;
+            padding:7px 10px;
+            .box{
+                margin-top:2px;
+                &:after{
+                    content:"";
+                    display:block;
+                    position:relative;
+                    z-index: 1;
+                    top:-2px;
+                    @include ic(check_active_off, 15, 15);
+                    background-size:15px;
+                }
+                background-size:100%;
+                border:none;
+                background-color:transparent;
+                margin-right:2px;
+            }
+            .text{
+                font-size:1.4rem;
+                color:$textCol3;
+                position:relative;
+                z-index: 1;
+            }
+            input:checked + .box{
+                background-size:100%;
+                background-color:transparent;
+                &:after{
+                    @include ic(check_round, 15, 15);
+                    background-size:15px;
+                }
+                &:before{
+                    content:"";
+                    display:block;
+                    width:100%;
+                    height:100%;
+                    position:absolute;
+                    left:0;
+                    top:0;
+                    background-color:$colPrimary;
+                    border-radius: 5px;
+                }
+            }
+            input:checked ~ .text{
+                color:#000;
+            }
+        }
         &--list{
             &.box{
                 background-color:$colBg;
@@ -908,6 +1009,7 @@ input{
             border:1px solid $colLine;
             .ss-values{
                 padding-left:13px;
+                margin-right:10px;
             }
             .ss-arrow{
                 min-width:14px;
@@ -930,6 +1032,7 @@ input{
                     color:#333 !important;
                     padding:0 18px;
                     transition:all .3s;
+                    white-space: nowrap;
                     &:hover{
                         background-color:$colBg;
                     }
@@ -966,7 +1069,7 @@ input{
             .text{
                 font-size:1.2rem;
                 font-weight: 400;
-                margin-right: 2px;
+                margin-right: 4px;
             }
         }
         input{
@@ -1004,6 +1107,7 @@ input{
     &-file{
         position:relative;
         display:flex;
+        cursor: pointer;
         input[type=file]{
             position:absolute;
             appearance: none;
@@ -1013,6 +1117,7 @@ input{
         .input-text{
             background-color:#fff;
             line-height: 50px;
+            @include text_ellipsis;
             &.center{
                 text-align: center;
                 color:$textCol1;
@@ -1206,11 +1311,61 @@ input{
     }
 }
 
+.select-multi{
+    position:relative;
+    z-index: 10;
+    height: 50px;
+    .select{
+        width:100%;
+        white-space: nowrap;
+        height: 100%;
+        border: 1px solid $colLine;
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 1.4rem;
+        padding: 0 40px 0 18px;
+        background:url(../images/icon/arrow_bottom_fill.svg)no-repeat calc(100% - 18px) 50%;
+        transition:none;
+        &.active{
+            background:url(../images/icon/arrow_top_fill.svg)no-repeat calc(100% - 18px) 50%;
+            & + .select-list{
+                transform:scaleY(1);
+            }
+        }
+        &-list{
+            min-width:100%;
+            position:absolute;
+            left:0;
+            top:calc(100% + 10px);
+            background-color:#fff;
+            border:1px solid $colLine;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+            border-radius: 5px;
+            max-height: 220px;
+            overflow-y: auto;
+            transition:transform .2s;
+            transform:scaleY(0);
+            transform-origin: top;
+            &--item{
+                padding:13px 20px;
+                white-space: nowrap;
+                &.top{
+                    border-bottom:1px solid $colLine;
+                }
+            }
+        }
+        .all{
+            color:$colSub;
+            margin-left:10px;
+        }
+    }
+}
+
 .datepicker{
     &-picker{
         width:300px;
         border-radius: 5px;
-        padding:15px;
+        padding:10px;
         font-size:1.4rem;
         .datepicker-controls .button{
             font-size:1.6rem;
@@ -1278,8 +1433,19 @@ input{
         width:100%;
         max-width: 100%;
     }
+    .flex15{
+        flex:1.5;
+    }
     .flex2{
         flex:2;
+    }
+    .text{
+        flex:none;
+        font-size:1.4rem;
+        margin:0 5px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -1303,6 +1469,152 @@ input{
             .alarm{
                 @include ic(bell_line, 22, 23);
                 margin:0 17px;
+                &-list{
+                    position:absolute;
+                    right:0;
+                    top:70px;
+                    z-index: 100;
+                    background-color: #fff;
+                    box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.1);
+                    border-radius: 5px;
+                    max-height: calc(100vh - 100px);
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                    &--item{
+                        padding:0 20px;
+                        &:last-child{
+                            margin-bottom:20px;
+                        }
+                        .alarm-wrap{
+                            width:274px;
+                            padding:12px 16px;
+                            font-size:1.2rem;
+                            border-radius: 5px;
+                            line-height: 1.5;
+                            display:flex;
+                            flex-direction: column;
+                            cursor: pointer;
+                            transition:all .3s;
+                            position:relative;
+                            &:hover{
+                                background-color:$colBg;
+                                .tit{
+                                    text-decoration: underline;
+                                    text-underline-offset: 2px;
+                                }
+                                .btn-delete{
+                                    opacity: 1;
+                                }
+                            }
+                            &.new{
+                                padding-left:30px;
+                                &:after{
+                                    content:"";
+                                    display:block;
+                                    width:6px;
+                                    height:6px;
+                                    border-radius: 3px;
+                                    background-color:$colSub;
+                                    position:absolute;
+                                    left:16px;
+                                    top:16px;
+                                }
+                            }
+                            &.read{
+                                .top, .date, .tit{
+                                    color:$colGrey;
+                                }
+                            }
+                            .top, .date{
+                                font-size:1.2rem;
+                                font-weight: 400;
+                                color:$textCol2;
+                            }
+                            .tit{
+                                font-size:1.4rem;
+                                color:#000;
+                                margin-bottom:2px;
+                            }
+                            .btn-delete{
+                                position:absolute;
+                                right:16px;
+                                top:14px;
+                                @include ic(delete_line, 14, 14);
+                                opacity: 0;
+                            }
+                        }
+                        &.none{
+                            padding:70px;
+                            text-align: center;
+                            font-size:1.4rem;
+                            line-height: 1.5;
+                            width:274px;
+                            &:before{
+                                content:"";
+                                display:block;
+                                @include ic(bell_line, 23, 23);
+                                margin:0 auto 8px;
+                            }
+                            p{
+                                font-size:1.2rem;
+                                font-weight: 400;
+                                color:$textCol2;
+                            }
+                        }
+                        &.top{
+                            background-color:$colPrimary;
+                            width:100%;
+                            position:sticky;
+                            left:0;
+                            top:0;
+                            z-index: 1;
+                            border-radius: 5px 5px 0 0;
+                            padding:20px;
+                            display:flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin-bottom:20px;
+                            .tit{
+                                font-size:1.6rem;
+                                font-weight: 600;
+                            }
+                            .right{
+                                .btn{
+                                    font-size:1.2rem;
+                                    font-weight: 400;
+                                    margin-left:8px;
+                                    padding-left:8px;
+                                    border-left:1px solid $textCol2;
+                                    &:first-child{
+                                        border-left: none;
+                                    }
+                                }
+                            }
+                        }
+                        &.notice{
+                            margin-bottom:20px;
+                            position:relative;
+                            &:after{
+                                content:"";
+                                display:block;
+                                width:calc(100% - 40px);
+                                position:absolute;
+                                left:20px;
+                                bottom:-10px;
+                                background-color:$colLine;
+                                height:1px;
+                            }
+                            .top{
+                                &:after{
+                                    content:"";
+                                    display:inline-block;
+                                    @include ic(notice_line_grey, 12, 10);
+                                    margin-left:2px;
+                                }
+                            }
+                        }
+                    }
+                }
             }
             .profile{
                 &.active{
@@ -1438,6 +1750,19 @@ input{
                 font-size:1.6rem;
                 font-weight: 600;
                 white-space: nowrap;
+                &.active{
+                    position:relative;
+                    &:after{
+                        content:"";
+                        display:block;
+                        width:calc(100% + 24px);
+                        height:4px;
+                        background-color:$colPrimary;
+                        position:absolute;
+                        left:-12px;
+                        bottom:-26px;
+                    }
+                }
             }
             .beta{
                 position:relative;
@@ -1495,6 +1820,9 @@ input{
             font-size:1.2rem;
             color:$colSub;
             padding-top:30px;
+            &.mt-100{
+                padding-top:0;
+            }
             .right{
                 float:right;
                 font-size:1.2rem;
@@ -1513,6 +1841,16 @@ input{
                 }
             }
         }
+    }
+    &-none{
+        height:200px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom:70px;
+        font-size:1.8rem;
+        color:$textCol3;
+        font-weight: 400;
     }
 }
 
@@ -1649,6 +1987,9 @@ input{
         position:relative;
         left:-20px;
         margin-bottom:30px;
+        & + .mypage-tab{
+            margin-top:60px;
+        }
         .input-text{
             border:2px solid $colPrimary;
             border-radius: 10px;
@@ -1861,6 +2202,13 @@ input{
         padding:70px 80px;
         border-radius: 10px;
         box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.1);
+        &.bg-black{
+            background-color:#000;
+            padding:40px 60px;
+            .modal-tit{
+                color:#fff;
+            }
+        }
         .scroll{
             max-height: calc(100vh - 300px);
             overflow-y: auto;
@@ -1906,13 +2254,19 @@ input{
             .input{
                 display:flex;
                 margin-top:30px;
-                .input-text{
+                .input-text, .input-select{
                     background-color:transparent;
                     color:$textCol3;
                 }
                 .sm{
                     width:40%;
                     margin-left:10px;
+                    & + *{
+                        margin-left:10px;
+                    }
+                    &:first-child{
+                        margin-left:0;
+                    }
                 }
                 .input-wrap{
                     width:100%;
