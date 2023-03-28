@@ -71,6 +71,9 @@ body, html {
     }
 }
 .mb{
+    &-0{
+        margin-bottom: 0 !important;
+    }
     &-20{
         margin-bottom: 20px !important;
     }
@@ -196,6 +199,13 @@ body, html {
             background-size: 5px;
             margin-left:8px;
             opacity: .8;
+            &.wh{
+                @include ic(arrow_back, 8, 12);
+                background-size: 8px;
+                transform:rotate(180deg);
+                filter: invert(1);
+                opacity: 1;
+            }
         }
     }
     &-primary{
@@ -291,6 +301,11 @@ body, html {
             width:14px;
             height:13px;
         }
+        &.half{
+            background-image:url(../images/icon/star_half.svg);
+            width:14px;
+            height:13px;
+        }
     }
     &-down{
         &:before{
@@ -307,6 +322,15 @@ body, html {
             @include ic(add_line, 12, 12);
             margin-right:4px;
         }
+    }
+    &-floating{
+        @include ic(top, 50, 50);
+        position:fixed;
+        right:100px;
+        bottom:100px;
+        background-color:$colBg;
+        border-radius: 25px;
+        box-shadow:0 5px 15px rgba(0, 0, 0, 0.1);
     }
 }
 
@@ -376,6 +400,7 @@ body, html {
     }
     &.primary{
         background-color:$colPrimary;
+        color:#000;
     }
     &.primary2{
         background-color:$colSub2;
@@ -387,12 +412,19 @@ body, html {
         &.badge-sm{
             line-height: 15px;
         }
+        &.fill{
+            background-color:#FFBC27;
+            border:none;
+            color:#000;
+        }
     }
     &.yellow{
         background-color:#F2DD22;
+        color:#000;
     }
     &.purple{
         background-color:#F4ECFF;
+        color:#000;
     }    
     &.purple2{
         background-color:#D8BAFF;
@@ -420,6 +452,17 @@ body, html {
     &.deepblue{
         background-color:#0A7AFF;
         color:#fff;
+    }
+    &.pink{
+        background-color:#FFB2B2;
+        color:#000;
+    }
+    &.lime{
+        background-color:#CCFF00;
+        color:#000;
+    }
+    &.power{
+        @include ic(badge_power, 140, 30);
     }
 }
 
@@ -703,6 +746,15 @@ input{
         }
         &.sm{
             font-size:1.2rem;
+            margin:20px 0 4px;
+            font-weight: 400;
+            &.required:after{
+                font-size:1.3rem;
+                right:-8px;
+            }
+        }
+        &.sm2{
+            font-size:1.2rem;
             color:$textCol3;
             margin:20px 0 4px;
             font-weight: 400;
@@ -758,6 +810,11 @@ input{
         &.correct{
             border-color:$colSub;
             color:$colSub;
+        }
+        &.wd{
+            &-500{
+                width:500px;
+            }
         }
     }
     &-date{
@@ -1423,6 +1480,145 @@ input{
     }
 }
 
+.react-datepicker-popper{
+    .react-datepicker {
+        border:1px solid $colLine;
+        box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
+        border-radius: 4px;
+        font-family: $font, sans-serif;
+    
+        &__month-container {
+            width: 300px;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 1.4rem;
+    
+            .react-datepicker__header {
+                background-color: inherit;
+                border: none;
+    
+                .datepicker-controls {
+                    display: flex;
+                    justify-content: space-between;
+    
+                    .button {
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                        font-family: $font, sans-serif;
+    
+                        &.prev-button {
+                            text-indent: -9999px;
+                            @include ic(arrow_prev_bl, 6, 35);
+                        }
+    
+                        &.next-button {
+                            text-indent: -9999px;
+                            @include ic(arrow_next_bl, 6, 35);
+                        }
+                    }
+                }
+            }
+        }
+    
+        &__current-month{
+            font-size:1.6rem;
+            font-family: $font, sans-serif;
+            padding:5px 0 10px;
+        }
+    
+        &__navigation--previous, &__navigation--next{
+            top:15px;
+        }
+        &__navigation-icon--previous::before, &__navigation-icon--next::before{
+            right:-15px;
+            border-color:#000 !important;
+            border-width:1px 1px 0 0;
+        }
+        &__navigation-icon--next::before{
+            right:unset;
+            left:-15px;
+        }
+
+        .react-datepicker__day--keyboard-selected{
+            background-color:transparent;
+        }
+    
+        .react-datepicker__day-names {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 38px;
+    
+            .react-datepicker__day-name {
+                font-family: $font, sans-serif;
+                font-size: 1.4rem;
+                font-weight: 500;
+                color: $colSub;
+    
+                &:first-child,
+                &:last-child {
+                    color: $colGrey;
+                }
+            }
+        }
+    
+        .react-datepicker__week {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 38px;
+        }
+    
+        .react-datepicker__day {
+            font-family: $font, sans-serif;
+            color: $textCol1;
+    
+            &.prev,
+            &.next {
+                color: $colGrey;
+                font-weight: 400;
+            }
+    
+            &:nth-child(7n),
+            &:nth-child(7n + 1),
+            &--outside-month {
+                color: $colGrey;
+            }
+    
+            &--selected,
+            &:hover {
+                background-color: transparent;
+            }
+    
+            &--selected {
+                position:relative;
+                &:after {
+                    content: "";
+                    width: 5px;
+                    height: 5px;
+                    background-color: $colPrimary;
+                    position: absolute;
+                    left: calc(50% - 2px);
+                    bottom: -10px;
+                    border-radius: 3px;
+                }
+            }
+    
+            &--today {
+                position: relative;
+                color: $textCol1;
+                font-weight: 500;
+            }
+    
+        }
+    
+        .react-datepicker__triangle{
+            display:none;
+        }
+    }
+}
+
 .col-2{
     display:flex;
     width:100%;
@@ -1766,7 +1962,7 @@ input{
             }
             .beta{
                 position:relative;
-                &:after{
+                &:before{
                     content:"";
                     display:block;
                     width:24px;
@@ -1997,6 +2193,7 @@ input{
             height:80px;
             font-size:2.4rem;
             font-weight: 700;
+            color:#000;
             padding:0 110px 0 30px;
             &::placeholder{
                 color:$colGrey;
@@ -2209,6 +2406,11 @@ input{
                 color:#fff;
             }
         }
+        &.only-image{
+            padding:0;
+            min-width: unset;
+            background-color:transparent;
+        }
         .scroll{
             max-height: calc(100vh - 300px);
             overflow-y: auto;
@@ -2237,7 +2439,7 @@ input{
         &.message{
             background-color:#000;
             padding:50px 65px;
-            .text{
+            & > .text{
                 width:550px;
                 text-align: center;
                 font-size:1.4rem;
@@ -2326,5 +2528,90 @@ input{
     .last .btn{
         @include ic(arrow_last, 30, 30);
         margin-left:10px;
+    }
+}
+
+.textalign_center {
+    text-align: center;
+}
+
+
+// 김솔희 custom-select 추가
+.custom-select {
+    position: relative;
+    z-index: 10;
+    height: 36px;
+
+    .select {
+        width: 100%;
+        white-space: nowrap;
+        height: 100%;
+        border: 1px solid $colLine;
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 1.4rem;
+        padding: 0 45px 0 18px;
+        background: url(../images/icon/arrow_bottom_fill.svg)no-repeat calc(100% - 18px) 50%;
+        transition: none;
+
+        &.active {
+            background: url(../images/icon/arrow_top_fill.svg)no-repeat calc(100% - 18px) 50%;
+
+            &+.select-list {
+                transform: scaleY(1);
+            }
+        }
+
+        &-list {
+            min-width: 100%;
+            position: absolute;
+            left: 0;
+            top: calc(100% + 10px);
+            background-color: #fff;
+            border: 1px solid $colLine;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+            border-radius: 5px;
+            max-height: 220px;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            transition: transform .2s;
+            transform: scaleY(0);
+            transform-origin: top;
+
+            &--item {
+                height: 40px;
+                line-height: 40px;
+                color: #333 !important;
+                padding: 0 18px;
+                transition: all .3s;
+                white-space: nowrap;
+                cursor: pointer;
+
+                .text {
+                    font-size: 1.4rem;
+                    color: $textCol2;
+                }
+
+                &:hover {
+                    background-color: $colBg;
+                }
+
+                &:active {
+                    background-color: $colGrey;
+                }
+
+            }
+
+            &--selected {
+                .text {
+                    color: $colSub !important;
+                }
+
+                &:hover {
+                    background-color: $colBg !important;
+                }
+            }
+
+        }
     }
 }

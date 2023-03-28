@@ -1,360 +1,216 @@
 <!DOCTYPE html>
 <html lang="ko">
-	<meta
-		content="text/html;charset=utf-8"
-		http-equiv="Content-Type"
-	/>
-	<meta content="IE=edge" http-equiv="X-UA-Compatible" />
-	<meta
-		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
-		name="viewport"
-	/>
-	<head>
-		<meta charset="UTF-8" />
-		<title>ai 히어로즈</title>
-		<link
-			href="./css/reset.css"
-			rel="stylesheet"
-			type="text/css"
-		/>
-		<link
-			href="./css/common.css"
-			rel="stylesheet"
-			type="text/css"
-		/>
-		<link
-			href="./css/style.css"
-			rel="stylesheet"
-			type="text/css"
-		/>
-		<link rel="stylesheet" href="./css/datepicker.css" />
-		<script src="./js/datepicker.js"></script>
-		<link rel="stylesheet" href="./css/slimselect.css" />
-		<script src="./js/slimselect.min.js"></script>
-	</head>
-	<body>
-		<div class="header">
-			<div class="header-wrap">
-				<div class="left">
-					<button
-						type="button"
-						class="btn header-logo"
-					></button>
-					<ul class="header-menu">
-						<li class="header-menu--item">
-							<button type="button" class="btn">
-								AI 프로젝트
-							</button>
-						</li>
-						<li class="header-menu--item">
-							<button type="button" class="btn">
-								히어로즈
-							</button>
-						</li>
-						<li class="header-menu--item">
-							<button type="button" class="btn">
-								커뮤니티
-							</button>
-						</li>
-						<li class="header-menu--item">
-							<button type="button" class="btn beta">
-								솔루션 스토어
-							</button>
-						</li>
-					</ul>
-				</div>
-				<div class="right">
-					<button type="button" class="btn alarm"></button>
-					<button type="button" class="btn profile active">
-						<div class="image-wrap">
-							<div class="image">
-								<img src="" alt="" />
-							</div>
-							<span class="grade type-1"></span>
-						</div>
-						<div class="text-wrap">
-							<span class="badge badge-sm grey2"
-								>클라이언트</span
-							>
-							<p>
-								<span class="name">홍길동최고홍길동</span>님
-							</p>
-						</div>
-					</button>
-					<div class="my-menu">
-						<button type="button" class="btn menu guide">
-							프로필 수정
-							<span class="text"
-								>히어로즈로 등록해 보세요!</span
-							>
-						</button>
-						<button type="button" class="btn menu c">
-							AI 프로젝트 관리
-						</button>
-						<button type="button" class="btn menu">
-							정산 관리
-						</button>
-						<button type="button" class="btn menu">
-							개인정보 수정
-						</button>
-						<button type="button" class="btn menu">
-							고객센터
-						</button>
-						<button type="button" class="btn bottom">
-							로그아웃
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="section">
-				<div class="mypage-tab">
-					<button type="button" class="btn active">
-						프로필
-					</button>
-					<button type="button" class="btn c">
-						AI 프로젝트 관리
-					</button>
-					<button type="button" class="btn h">
-						AI 프로젝트 관리
-					</button>
-					<button type="button" class="btn">
-						정산 관리
-					</button>
-				</div>
-				<div class="mypage-con">
-					<div class="section-tit">기본 정보</div>
-					<div class="col-2">
-						<div>
-							<div class="input-wrap">
-								<label class="input-label required">
-									회원 유형
-									<div class="tooltip default right">
-										<button
-											type="button"
-											class="btn i"
-										></button>
-										<div class="tooltip-message">
-											ㆍ법인 및 개인사업자가 있는 프리랜서일
-											경우 ‘기업(사업자)’을 선택해
-											주세요.<br />
-											ㆍ‘기업(사업자)’ 선택 시 인증 절차가
-											필수로 진행돼요.<br />
-											ㆍ사업자가 없는 프리랜서일 경우
-											‘개인’을 선택해 주세요.
-										</div>
-									</div>
-								</label>
-								<label class="input-radio">
-									<input
-										type="radio"
-										name="radio1"
-										checked
-									/>
-									<span class="box">기업(사업자)</span>
-								</label>
-								<div class="col-2 mt-10">
-									<div>
-										<div class="btn-exist">
-											<input
-												type="text"
-												class="input-text"
-												placeholder="‘-’제외 사업자번호 입력"
-												value="1112255555"
-											/>
-											<button
-												type="button"
-												class="btn btn-black type2"
-											>
-												인증 요청
-											</button>
-										</div>
-									</div>
-									<div class="ml-10">
-										<input
-											type="text"
-											class="input-text"
-											placeholder="기업(사업자) 이름을 입력해 주세요."
-											disabled
-										/>
-									</div>
-								</div>
-								<label class="input-file mt-10">
-									<input type="file" />
-									<span class="input-text center"
-										>사업자등록증 첨부<span
-											class="txt-c--grey"
-											>(jpg, png, pdf 최대 5MB 첨부
-											가능)</span
-										></span
-									>
-								</label>
-							</div>
-						</div>
-						<div class="ml-20">
-							<div class="input-wrap">
-								<label class="input-label">&nbsp;</label>
-								<label class="input-radio">
-									<input type="radio" name="radio1" />
-									<span class="box">개인</span>
-								</label>
-							</div>
-						</div>
-					</div>
-					<div class="col-2">
-						<div class="mypage-profile">
-							<div class="left">
-								<div class="input-wrap">
-									<label class="input-label"
-										>프로필 이미지</label
-									>
-									<label class="input-file">
-										<input type="file" />
-										<div class="input-photo">
-											<img src="" alt="" />
-										</div>
-									</label>
-								</div>
-							</div>
-							<div class="right">
-								<div class="input-wrap">
-									<label class="input-label required"
-										>이름</label
-									>
-									<input
-										type="text"
-										class="input-text"
-										value="허균"
-										readonly
-									/>
-								</div>
-								<div class="input-wrap">
-									<label class="input-label required"
-										>연락처</label
-									>
-									<div class="btn-exist">
-										<input
-											type="text"
-											class="input-text"
-											value="01012341234"
-											readonly
-										/>
-										<button
-											type="button"
-											class="btn btn-black type2"
-										>
-											재인증
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="ml-20">
-							<div class="input-wrap">
-								<label class="input-label required"
-									>이메일</label
-								>
-								<input
-									type="text"
-									class="input-text"
-									value="ai_heroes@aiheroes.ai"
-									readonly
-								/>
-							</div>
-							<div class="input-wrap">
-								<label class="input-label required"
-									>닉네임</label
-								>
-								<div class="btn-exist">
-									<input
-										type="text"
-										class="input-text"
-										value="홍길동"
-										readonly
-									/>
-									<button
-										type="button"
-										class="btn btn-black type2"
-									>
-										닉네임 변경
-									</button>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="btn-wrap mt-100">
-						<div class="tooltip guide top">
-							<button
-								type="button"
-								class="btn btn-lg btn-black type2"
-							>
-								히어로즈 등록
-							</button>
-						</div>
-						<button
-							type="button"
-							class="btn btn-lg btn-black type2 ml-20"
-							disabled
-						>
-							프로필 등록/수정하기
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="footer">
-			<div class="footer-wrap">
-				<div class="footer-logo"></div>
-				<div class="footer-info">
-					<div class="footer-menu">
-						<button type="button" class="btn">
-							기업소개
-						</button>
-						<button type="button" class="btn">
-							이용약관
-						</button>
-						<button type="button" class="btn">
-							개인정보처리방침
-						</button>
-						<button type="button" class="btn">
-							고객센터
-						</button>
-					</div>
-					<div class="text">
-						(주)알체라(대표이사:황영규) | 경기도 성남시
-						분당구 판교로256번길 25 GB2빌딩 C동 7층<br />
-						통신판매업신고 : 2018-성남분당-0205 |
-						사업자등록번호: 643-87-00337
-					</div>
-					<div class="text">ⓒ 2023 Alchera Inc.</div>
-				</div>
-				<div class="footer-sns">
-					<button type="button" class="btn sns-1"></button>
-					<button type="button" class="btn sns-2"></button>
-					<button type="button" class="btn sns-3"></button>
-				</div>
-			</div>
-		</div>
-		<div class="modal show">
-			<div class="modal-dim"></div>
-			<div class="modal-con message">
-				<div class="text">
-					<p class="strong">기업(사업자) 인증 실패</p>
-					입력된 사업자번호를 다시 확인해 주세요.<br />
-					계속하여 문제가 발생하면 고객센터로 문의해 주세요.
-				</div>
-				<div class="btn-wrap">
-					<button
-						type="button"
-						class="btn btn-lg btn-primary"
-					>
-						확인
-					</button>
-				</div>
-			</div>
-		</div>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport">
+<head>
+    <meta charset="UTF-8">
+    <title>ai 히어로즈</title>
+    <link href="./css/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="./css/datepicker.css" />
+    <script src="./js/datepicker.js"></script>
+    <link rel="stylesheet" href="./css/slimselect.css" />
+    <script src="./js/slimselect.min.js"></script>
+</head>
+<body>
 
-		<script></script>
-	</body>
+<div class="header">
+    <div class="header-wrap">
+        <div class="left">
+            <button type="button" class="btn header-logo"></button>
+            <ul class="header-menu">
+                <li class="header-menu--item">
+                    <button type="button" class="btn">AI 프로젝트</button>
+                </li>
+                <li class="header-menu--item">
+                    <button type="button" class="btn">히어로즈</button>
+                </li>
+                <li class="header-menu--item">
+                    <button type="button" class="btn">커뮤니티</button>
+                </li>
+                <li class="header-menu--item">
+                    <button type="button" class="btn beta">솔루션 스토어</button>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <button type="button" class="btn alarm"></button>
+            <button type="button" class="btn profile active">
+                <div class="image-wrap">
+                    <div class="image">
+                        <img src="" alt="" />
+                    </div>
+                    <span class="grade type-1"></span>
+                </div>
+                <div class="text-wrap">
+                    <span class="badge badge-sm grey2">클라이언트</span>
+                    <p><span class="name">홍길동최고홍길동</span>님</p>
+                </div>
+            </button>
+            <div class="my-menu">
+                <button type="button" class="btn menu guide">
+                    프로필 수정
+                    <span class="text">히어로즈로 등록해 보세요!</span>
+                </button>
+                <button type="button" class="btn menu c">AI 프로젝트 관리</button>
+                <button type="button" class="btn menu">정산 관리</button>
+                <button type="button" class="btn menu">개인정보 수정</button>
+                <button type="button" class="btn menu">고객센터</button>
+                <button type="button" class="btn bottom">로그아웃</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="section">
+        <div class="mypage-tab">
+            <button type="button" class="btn active">프로필</button>
+            <button type="button" class="btn c">AI 프로젝트 관리</button>
+            <button type="button" class="btn h">AI 프로젝트 관리</button>
+            <button type="button" class="btn">정산 관리</button>
+        </div>
+        <div class="mypage-con">
+            <div class="section-tit">기본 정보</div>
+            <div class="col-2">
+                <div>
+                    <div class="input-wrap">
+                        <label class="input-label required">
+                            회원 유형
+                            <div class="tooltip default right">
+                                <button type="button" class="btn i"></button>
+                                <div class="tooltip-message">
+                                    ㆍ법인 및 개인사업자가 있는 프리랜서일 경우 ‘기업(사업자)’을 선택해 주세요.<br />
+                                    ㆍ‘기업(사업자)’ 선택 시 인증 절차가 필수로 진행돼요.<br />
+                                    ㆍ사업자가 없는 프리랜서일 경우 ‘개인’을 선택해 주세요.
+                                </div>
+                            </div>
+                        </label>
+                        <label class="input-radio">
+                            <input type="radio" name="radio1" checked />
+                            <span class="box">기업(사업자)</span>
+                        </label>
+                        <div class="col-2 mt-10">
+                            <div>
+                                <div class="btn-exist">
+                                    <input type="text" class="input-text" placeholder="‘-’제외 사업자번호 입력" value="1112255555" />
+                                    <button type="button" class="btn btn-black type2">인증 요청</button>
+                                </div>
+                            </div>
+                            <div class="ml-10">
+                                <input type="text" class="input-text" placeholder="기업(사업자) 이름을 입력해 주세요." disabled />
+                            </div>
+                        </div>
+                        <label class="input-file mt-10">
+                            <input type="file" />
+                            <span class="input-text center">사업자등록증 첨부<span class="txt-c--grey">(jpg, png, pdf 최대 5MB 첨부 가능)</span></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="ml-20">
+                    <div class="input-wrap">
+                        <label class="input-label">&nbsp;</label>
+                        <label class="input-radio">
+                            <input type="radio" name="radio1" />
+                            <span class="box">개인</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="mypage-profile">
+                    <div class="left">
+                        <div class="input-wrap">
+                            <label class="input-label">프로필 이미지</label>
+                            <label class="input-file">
+                                <input type="file" />
+                                <div class="input-photo">
+                                    <img src="" alt="" />
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="input-wrap">
+                            <label class="input-label required">이름</label>
+                            <input type="text" class="input-text" value="허균" readonly />
+                        </div>
+                        <div class="input-wrap">
+                            <label class="input-label required">연락처</label>
+                            <div class="btn-exist">
+                                <input type="text" class="input-text" value="01012341234" readonly />
+                                <button type="button" class="btn btn-black type2">재인증</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ml-20">
+                    <div class="input-wrap">
+                        <label class="input-label required">이메일</label>
+                        <input type="text" class="input-text" value="ai_heroes@aiheroes.ai" readonly />
+                    </div>
+                    <div class="input-wrap">
+                        <label class="input-label required">닉네임</label>
+                        <div class="btn-exist">
+                            <input type="text" class="input-text" value="홍길동" readonly />
+                            <button type="button" class="btn btn-black type2">닉네임 변경</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-wrap mt-100">
+                <div class="tooltip guide top">
+                    <button type="button" class="btn btn-lg btn-black type2">히어로즈 등록</button>
+                </div>
+                <button type="button" class="btn btn-lg btn-black type2 ml-20" disabled>프로필 등록/수정하기</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-wrap">
+        <div class="footer-logo"></div>
+        <div class="footer-info">
+            <div class="footer-menu">
+                <button type="button" class="btn">기업소개</button>
+                <button type="button" class="btn">이용약관</button>
+                <button type="button" class="btn">개인정보처리방침</button>
+                <button type="button" class="btn">고객센터</button>
+            </div>
+            <div class="text">
+                (주)알체라(대표이사:황영규) | 경기도 성남시 분당구 판교로256번길 25 GB2빌딩 C동 7층<br />
+                통신판매업신고  : 2018-성남분당-0205 | 사업자등록번호: 643-87-00337
+            </div>
+            <div class="text">
+                ⓒ 2023 Alchera Inc.
+            </div>
+        </div>
+        <div class="footer-sns">
+            <button type="button" class="btn sns-1"></button>
+            <button type="button" class="btn sns-2"></button>
+            <button type="button" class="btn sns-3"></button>
+        </div>
+    </div>
+</div>
+<div class="modal show">
+    <div class="modal-dim"></div>
+    <div class="modal-con message">
+        <div class="text">
+            <p class="strong">기업(사업자) 인증 실패</p>
+            입력된 사업자번호를 다시 확인해 주세요.<br />
+            계속하여 문제가 발생하면 고객센터로 문의해 주세요.
+        </div>
+        <div class="btn-wrap">
+            <button type="button" class="btn btn-lg btn-primary">확인</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    
+</script>
+
+</body>
 </html>

@@ -1,528 +1,301 @@
 <!DOCTYPE html>
 <html lang="ko">
-	<meta
-		content="text/html;charset=utf-8"
-		http-equiv="Content-Type"
-	/>
-	<meta content="IE=edge" http-equiv="X-UA-Compatible" />
-	<meta
-		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
-		name="viewport"
-	/>
-	<head>
-		<meta charset="UTF-8" />
-		<title>ai 히어로즈</title>
-		<link
-			href="./css/reset.css"
-			rel="stylesheet"
-			type="text/css"
-		/>
-		<link
-			href="./css/common.css"
-			rel="stylesheet"
-			type="text/css"
-		/>
-		<link
-			href="./css/style.css"
-			rel="stylesheet"
-			type="text/css"
-		/>
-		<link rel="stylesheet" href="./css/datepicker.css" />
-		<script src="./js/datepicker.js"></script>
-		<link rel="stylesheet" href="./css/slimselect.css" />
-		<script src="./js/slimselect.min.js"></script>
-	</head>
-	<body>
-		<div class="header">
-			<div class="header-wrap">
-				<div class="left">
-					<button
-						type="button"
-						class="btn header-logo"
-					></button>
-					<ul class="header-menu">
-						<li class="header-menu--item">
-							<button type="button" class="btn">
-								AI 프로젝트
-							</button>
-						</li>
-						<li class="header-menu--item">
-							<button type="button" class="btn">
-								히어로즈
-							</button>
-						</li>
-						<li class="header-menu--item">
-							<button type="button" class="btn">
-								커뮤니티
-							</button>
-						</li>
-						<li class="header-menu--item">
-							<button type="button" class="btn beta">
-								솔루션 스토어
-							</button>
-						</li>
-					</ul>
-				</div>
-				<div class="right">
-					<button type="button" class="btn alarm"></button>
-					<button type="button" class="btn profile active">
-						<div class="image-wrap">
-							<div class="image">
-								<img src="" alt="" />
-							</div>
-							<span class="grade type-5"></span>
-						</div>
-						<div class="text-wrap">
-							<span class="badge badge-sm primary"
-								>기업 히어로즈</span
-							>
-							<p>
-								<span class="name">홍길동최고홍길동</span>님
-							</p>
-						</div>
-					</button>
-					<div class="my-menu">
-						<button type="button" class="btn menu guide">
-							프로필 수정
-							<span class="text"
-								>히어로즈로 등록해 보세요!</span
-							>
-						</button>
-						<button type="button" class="btn menu c">
-							AI 프로젝트 관리
-						</button>
-						<button type="button" class="btn menu">
-							정산 관리
-						</button>
-						<button type="button" class="btn menu">
-							개인정보 수정
-						</button>
-						<button type="button" class="btn menu">
-							고객센터
-						</button>
-						<button type="button" class="btn bottom">
-							로그아웃
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="section">
-				<div class="mypage-tab">
-					<button type="button" class="btn">프로필</button>
-					<button type="button" class="btn c">
-						AI 프로젝트 관리
-					</button>
-					<button type="button" class="btn h">
-						AI 프로젝트 관리
-					</button>
-					<button type="button" class="btn active">
-						정산 관리
-					</button>
-				</div>
-				<div class="mypage-con">
-					<div class="section-tit">정산 요약</div>
-					<div class="calculate-top">
-						<div class="left">
-							<div class="tit">
-								입금 예정 금액
-								<div class="tooltip default right">
-									<button
-										type="button"
-										class="btn i"
-									></button>
-									<div class="tooltip-message">
-										중개 수수료(10%)를 제외한 총 입금 예정
-										금액이에요.
-									</div>
-								</div>
-							</div>
-							<div class="date">
-								계약 기간 | 2022-11-11 ~ 2023-11-11
-							</div>
-							<div class="num">
-								1,000,000,000<span class="text">원</span>
-							</div>
-						</div>
-						<div class="right">
-							<div class="tit">
-								정산 예정일
-								<div class="tooltip default right">
-									<button
-										type="button"
-										class="btn i"
-									></button>
-									<div class="tooltip-message">
-										정산이 수행되는 확정 날짜예요.
-									</div>
-								</div>
-							</div>
-							<div class="date"></div>
-							<div class="num">2023-03-10</div>
-						</div>
-					</div>
-					<div class="section-tit mt-40">정산 정보</div>
-					<div class="col-2">
-						<div>
-							<div class="input-wrap">
-								<label class="input-label"
-									>기업(사업자) 이름</label
-								>
-								<input
-									type="text"
-									class="input-text"
-									value="조선팔도강산금강산"
-									readonly=""
-								/>
-							</div>
-							<div class="input-wrap">
-								<label class="input-label">담당자</label>
-								<input
-									type="text"
-									class="input-text"
-									value="허균"
-									readonly=""
-								/>
-								<p class="input-guide">&nbsp;</p>
-							</div>
-							<div class="input-wrap">
-								<label class="input-label required"
-									>담당자 연락처</label
-								>
-								<div class="btn-exist">
-									<input
-										type="text"
-										class="input-text error"
-										value="01023456789"
-										readonly=""
-									/>
-									<button
-										type="button"
-										class="btn btn-black type2"
-									>
-										재인증
-									</button>
-								</div>
-								<p class="input-guide error">
-									인증에 실패했어요.
-								</p>
-							</div>
-						</div>
-						<div class="ml-20">
-							<div class="input-wrap">
-								<label class="input-label"
-									>사업자 번호</label
-								>
-								<input
-									type="text"
-									class="input-text"
-									value="1112255555"
-									readonly=""
-								/>
-							</div>
-							<div class="input-wrap">
-								<label class="input-label required"
-									>이메일</label
-								>
-								<input
-									type="text"
-									class="input-text error"
-									value="ai_heroes@aiheroes.ai"
-								/>
-								<p class="input-guide error">
-									올바른 이메일 형식이 아니에요.
-								</p>
-							</div>
-							<div class="input-wrap">
-								<label class="input-label required"
-									>수익금 입금 계좌</label
-								>
-								<div class="col-2 mt-10">
-									<div>
-										<input
-											type="text"
-											class="input-text error"
-											placeholder="신한은행"
-											readonly
-										/>
-										<p class="input-guide error">
-											인증에 실패했어요.
-										</p>
-									</div>
-									<div class="ml-10 flex2">
-										<div class="btn-exist">
-											<input
-												type="text"
-												class="input-text error"
-												value="111000999999"
-												readonly
-											/>
-											<button
-												type="button"
-												class="btn btn-black type2"
-											>
-												재인증
-											</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="btn-wrap type2 mt-40">
-						<button
-							type="button"
-							class="btn btn-half btn-black type2"
-							disabled
-						>
-							저장하기
-						</button>
-						<button
-							type="button"
-							class="btn btn-half btn-grey"
-						>
-							취소
-						</button>
-					</div>
-					<div class="section-tit mt-40">정산 내역</div>
-					<div class="history-list--top">
-						<select class="input-select first sm">
-							<option>분기</option>
-							<option>직접선택</option>
-						</select>
-						<select class="input-select sm">
-							<option>2023년</option>
-							<option>2022년</option>
-						</select>
-						<div class="radio-list">
-							<label class="input-radio">
-								<input type="radio" name="radio" checked />
-								<span class="box">1분기</span>
-							</label>
-							<label class="input-radio">
-								<input type="radio" name="radio" />
-								<span class="box">2분기</span>
-							</label>
-							<label class="input-radio">
-								<input type="radio" name="radio" />
-								<span class="box">3분기</span>
-							</label>
-							<label class="input-radio">
-								<input type="radio" name="radio" />
-								<span class="box">4분기</span>
-							</label>
-						</div>
-						<div class="right">
-							<button
-								type="button"
-								class="btn btn-down btn-sm btn-prupleline"
-							>
-								상세내역 다운로드
-							</button>
-						</div>
-					</div>
-					<ul class="history-list type3">
-						<li class="history-list--item top">
-							<div class="text-left">
-								구분<button
-									type="button"
-									class="btn sort des"
-								></button>
-							</div>
-							<div class="text-left">
-								프로젝트 이름<button
-									type="button"
-									class="btn sort asc"
-								></button>
-							</div>
-							<div class="text-left">계약 기간</div>
-							<div class="text-left">정산 예정일</div>
-							<div class="text-left">정산 완료일</div>
-							<div class="text-left">정산 금액</div>
-							<div class="text-left">수수료(10%)</div>
-							<div class="text-left">
-								최종 정산 금액<button
-									type="button"
-									class="btn sort des"
-								></button>
-							</div>
-							<div class="text-left">
-								정산 형태<button
-									type="button"
-									class="btn sort asc"
-								></button>
-							</div>
-							<div class="text-left">정산 방식</div>
-						</li>
-						<li class="history-list--item">
-							<div class="text-left">
-								<span class="badge badge-sm d-grey"
-									>입금 예정</span
-								>
-							</div>
-							<div class="text-left tit">
-								맥주 라벨 검출 정확도 90% 이상 길어지면
-								말줄임 처리됩니다
-							</div>
-							<div class="text-left">
-								2022-04-01 ~ 2023-04-01
-							</div>
-							<div class="text-left">2023-04-01</div>
-							<div class="text-left">2023-04-01</div>
-							<div class="text-left strong">
-								1,000,000,000원
-							</div>
-							<div class="text-left strong">
-								1,000,000,000원
-							</div>
-							<div class="text-left strong">
-								1,000,000,000원
-							</div>
-							<div class="text-left">전체 계약금</div>
-							<div class="text-left">에스크로</div>
-						</li>
-						<li class="history-list--item">
-							<div class="text-left">
-								<span class="badge badge-sm deeppurple"
-									>입금 완료</span
-								>
-							</div>
-							<div class="text-left tit">
-								맥주 라벨 검출 정확도 90% 이상 길어지면
-								말줄임 처리됩니다
-							</div>
-							<div class="text-left">
-								2022-04-01 ~ 2023-04-01
-							</div>
-							<div class="text-left">2023-04-01</div>
-							<div class="text-left">2023-04-01</div>
-							<div class="text-left strong">
-								1,000,000,000원
-							</div>
-							<div class="text-left strong">
-								1,000,000,000원
-							</div>
-							<div class="text-left strong">
-								1,000,000,000원
-							</div>
-							<div class="text-left">전체 계약금</div>
-							<div class="text-left">에스크로</div>
-						</li>
-					</ul>
-					<ul class="pagination">
-						<li class="pagination-item arrow first">
-							<button type="button" class="btn"></button>
-						</li>
-						<li class="pagination-item arrow prev">
-							<button type="button" class="btn"></button>
-						</li>
-						<li class="pagination-item">
-							<button type="button" class="btn active">
-								1
-							</button>
-							<button type="button" class="btn">2</button>
-							<button type="button" class="btn">3</button>
-						</li>
-						<li class="pagination-item arrow next">
-							<button type="button" class="btn"></button>
-						</li>
-						<li class="pagination-item arrow last">
-							<button type="button" class="btn"></button>
-						</li>
-					</ul>
-					<div class="mypage-guide">
-						<div class="tit">
-							잊지 말고 꼭 확인해 주세요!
-						</div>
-						<div class="sub">대금지급 관련 안내</div>
-						<ul class="text">
-							<li class="text-item">
-								<strong
-									>정산 정보를 꼭 입력해야 정상적으로 대금
-									지급이 완료돼요.</strong
-								>
-							</li>
-							<li class="text-item">
-								기업 히어로즈의 경우 ‘정산 정보’ 중 ‘수익금
-								입금 계좌’의 계좌명이 기업(사업자)명과
-								달라도 대금 지급은 완료되지만,
-								<strong
-									>사업용 계좌 거래로 인정되지 않아 발생할
-									수 있는 가산세 부과에 대해서 AI 히어로즈는
-									책임이 없음을 알려드려요.</strong
-								>
-							</li>
-							<li class="text-item">
-								계약서에 따라 지급 형태가 선금 / 중도금 /
-								잔금으로 나누어질 경우, 세금계산서는 각각
-								별도 발행돼요.
-							</li>
-							<li class="text-item">
-								선금 / 중도금 / 잔금 지급과 일정은 계약서
-								기반으로 실행돼요.
-							</li>
-							<li class="text-item">
-								<strong
-									>AI 히어로즈의 중개 수수료는 10%이며, 정산
-									시 수수료와 세금을 제외한 나머지 금액이
-									입금돼요.</strong
-								>
-							</li>
-							<li class="text-item">
-								지급 형태와 관계없이, AI 히어로즈는 선금
-								단계에서 전체 금액의 수수료 10%를 취득해요.
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="footer">
-			<div class="footer-wrap">
-				<div class="footer-logo"></div>
-				<div class="footer-info">
-					<div class="footer-menu">
-						<button type="button" class="btn">
-							기업소개
-						</button>
-						<button type="button" class="btn">
-							이용약관
-						</button>
-						<button type="button" class="btn">
-							개인정보처리방침
-						</button>
-						<button type="button" class="btn">
-							고객센터
-						</button>
-					</div>
-					<div class="text">
-						(주)알체라(대표이사:황영규) | 경기도 성남시
-						분당구 판교로256번길 25 GB2빌딩 C동 7층<br />
-						통신판매업신고 : 2018-성남분당-0205 |
-						사업자등록번호: 643-87-00337
-					</div>
-					<div class="text">ⓒ 2023 Alchera Inc.</div>
-				</div>
-				<div class="footer-sns">
-					<button type="button" class="btn sns-1"></button>
-					<button type="button" class="btn sns-2"></button>
-					<button type="button" class="btn sns-3"></button>
-				</div>
-			</div>
-		</div>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport">
+<head>
+    <meta charset="UTF-8">
+    <title>ai 히어로즈</title>
+    <link href="./css/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="./css/datepicker.css" />
+    <script src="./js/datepicker.js"></script>
+    <link rel="stylesheet" href="./css/slimselect.css" />
+    <script src="./js/slimselect.min.js"></script>
+</head>
+<body>
 
-		<script>
-			var selects =
-				document.getElementsByClassName('input-select');
-			for (var i = 0; i < selects.length; i++) {
-				new SlimSelect({
-					select:
-						document.getElementsByClassName('input-select')[
-							i
-						],
-				});
-			}
-		</script>
-	</body>
+<div class="header">
+    <div class="header-wrap">
+        <div class="left">
+            <button type="button" class="btn header-logo"></button>
+            <ul class="header-menu">
+                <li class="header-menu--item">
+                    <button type="button" class="btn">AI 프로젝트</button>
+                </li>
+                <li class="header-menu--item">
+                    <button type="button" class="btn">히어로즈</button>
+                </li>
+                <li class="header-menu--item">
+                    <button type="button" class="btn">커뮤니티</button>
+                </li>
+                <li class="header-menu--item">
+                    <button type="button" class="btn beta">솔루션 스토어</button>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <button type="button" class="btn alarm"></button>
+            <button type="button" class="btn profile active">
+                <div class="image-wrap">
+                    <div class="image">
+                        <img src="" alt="" />
+                    </div>
+                    <span class="grade type-5"></span>
+                </div>
+                <div class="text-wrap">
+                    <span class="badge badge-sm primary">기업 히어로즈</span>
+                    <p><span class="name">홍길동최고홍길동</span>님</p>
+                </div>
+            </button>
+            <div class="my-menu">
+                <button type="button" class="btn menu guide">
+                    프로필 수정
+                    <span class="text">히어로즈로 등록해 보세요!</span>
+                </button>
+                <button type="button" class="btn menu c">AI 프로젝트 관리</button>
+                <button type="button" class="btn menu">정산 관리</button>
+                <button type="button" class="btn menu">개인정보 수정</button>
+                <button type="button" class="btn menu">고객센터</button>
+                <button type="button" class="btn bottom">로그아웃</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="section">
+        <div class="mypage-tab">
+            <button type="button" class="btn">프로필</button>
+            <button type="button" class="btn c">AI 프로젝트 관리</button>
+            <button type="button" class="btn h">AI 프로젝트 관리</button>
+            <button type="button" class="btn active">정산 관리</button>
+        </div>
+        <div class="mypage-con">
+            <div class="section-tit">정산 요약</div>
+            <div class="calculate-top">
+                <div class="left">
+                    <div class="tit">
+                        입금 예정 금액
+                        <div class="tooltip default right">
+                            <button type="button" class="btn i"></button>
+                            <div class="tooltip-message">
+                                중개 수수료(10%)를 제외한 총 입금 예정 금액이에요.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date">계약 기간 | 2022-11-11 ~ 2023-11-11</div>
+                    <div class="num">1,000,000,000<span class="text">원</span></div>
+                </div>
+                <div class="right">
+                    <div class="tit">
+                        정산 예정일
+                        <div class="tooltip default right">
+                            <button type="button" class="btn i"></button>
+                            <div class="tooltip-message">
+                                정산이 수행되는 확정 날짜예요. 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date"></div>
+                    <div class="num">2023-03-10</div>
+                </div>
+            </div>
+            <div class="section-tit mt-40">정산 정보</div>
+            <div class="col-2">
+                <div>
+                    <div class="input-wrap">
+                        <label class="input-label">기업(사업자) 이름</label>
+                        <input type="text" class="input-text" value="조선팔도강산금강산" readonly="">
+                    </div>
+                    <div class="input-wrap">
+                        <label class="input-label">담당자</label>
+                        <input type="text" class="input-text" value="허균" readonly="">
+                        <p class="input-guide">&nbsp;</p>
+                    </div>
+                    <div class="input-wrap">
+                        <label class="input-label required">담당자 연락처</label>
+                        <div class="btn-exist">
+                            <input type="text" class="input-text error" value="01023456789" readonly="">
+                            <button type="button" class="btn btn-black type2">재인증</button>
+                        </div>
+                        <p class="input-guide error">인증에 실패했어요.</p>
+                    </div>
+                </div>
+                <div class="ml-20">
+                    <div class="input-wrap">
+                        <label class="input-label">사업자 번호</label>
+                        <input type="text" class="input-text" value="1112255555" readonly="">
+                    </div>
+                    <div class="input-wrap">
+                        <label class="input-label required">이메일</label>
+                        <input type="text" class="input-text error" value="ai_heroes@aiheroes.ai">
+                        <p class="input-guide error">올바른 이메일 형식이 아니에요.</p>
+                    </div>
+                    <div class="input-wrap">
+                        <label class="input-label required">수익금 입금 계좌</label>
+                        <div class="col-2 mt-10">
+                            <div>
+                                <input type="text" class="input-text error" placeholder="신한은행"  readonly>
+                                <p class="input-guide error">인증에 실패했어요.</p>
+                            </div>
+                            <div class="ml-10 flex2">
+                                <div class="btn-exist">
+                                    <input type="text" class="input-text error" value="111000999999" readonly>
+                                    <button type="button" class="btn btn-black type2">재인증</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-wrap type2 mt-40">
+                <button type="button" class="btn btn-half btn-black type2" disabled>저장하기</button>
+                <button type="button" class="btn btn-half btn-grey">취소</button>
+            </div>
+            <div class="section-tit mt-40">정산 내역</div>
+            <div class="history-list--top">
+                <select class="input-select first sm">
+                    <option>분기</option>
+                    <option>직접선택</option>
+                </select>
+                <select class="input-select sm">
+                    <option>2023년</option>
+                    <option>2022년</option>
+                </select>
+                <div class="radio-list">
+                    <label class="input-radio">
+                        <input type="radio" name="radio" checked />
+                        <span class="box">1분기</span>
+                    </label>
+                    <label class="input-radio">
+                        <input type="radio" name="radio" />
+                        <span class="box">2분기</span>
+                    </label>
+                    <label class="input-radio">
+                        <input type="radio" name="radio" />
+                        <span class="box">3분기</span>
+                    </label>
+                    <label class="input-radio">
+                        <input type="radio" name="radio" />
+                        <span class="box">4분기</span>
+                    </label>
+                </div>
+                <div class="right">
+                    <button type="button" class="btn btn-down btn-sm btn-prupleline">상세내역 다운로드</button>
+                </div>
+            </div>
+            <ul class="history-list type3">
+                <li class="history-list--item top">
+                    <div class="text-left">구분<button type="button" class="btn sort des"></button></div>
+                    <div class="text-left">프로젝트 이름<button type="button" class="btn sort asc"></button></div>
+                    <div class="text-left">계약 기간</div>
+                    <div class="text-left">정산 예정일</div>
+                    <div class="text-left">정산 완료일</div>
+                    <div class="text-left">정산 금액</div>
+                    <div class="text-left">수수료(10%)</div>
+                    <div class="text-left">최종 정산 금액<button type="button" class="btn sort des"></button></div>
+                    <div class="text-left">정산 형태<button type="button" class="btn sort asc"></button></div>
+                    <div class="text-left">정산 방식</div>
+                </li>
+                <li class="history-list--item">
+                    <div class="text-left"><span class="badge badge-sm d-grey">입금 예정</span></div>
+                    <div class="text-left tit">맥주 라벨 검출 정확도 90% 이상 길어지면 말줄임 처리됩니다</div>
+                    <div class="text-left">2022-04-01 ~ 2023-04-01</div>
+                    <div class="text-left">2023-04-01</div>
+                    <div class="text-left">2023-04-01</div>
+                    <div class="text-left strong">1,000,000,000원</div>
+                    <div class="text-left strong">1,000,000,000원</div>
+                    <div class="text-left strong">1,000,000,000원</div>
+                    <div class="text-left">전체 계약금</div>
+                    <div class="text-left">에스크로</div>
+                </li>
+                <li class="history-list--item">
+                    <div class="text-left"><span class="badge badge-sm deeppurple">입금 완료</span></div>
+                    <div class="text-left tit">맥주 라벨 검출 정확도 90% 이상 길어지면 말줄임 처리됩니다</div>
+                    <div class="text-left">2022-04-01 ~ 2023-04-01</div>
+                    <div class="text-left">2023-04-01</div>
+                    <div class="text-left">2023-04-01</div>
+                    <div class="text-left strong">1,000,000,000원</div>
+                    <div class="text-left strong">1,000,000,000원</div>
+                    <div class="text-left strong">1,000,000,000원</div>
+                    <div class="text-left">전체 계약금</div>
+                    <div class="text-left">에스크로</div>
+                </li>
+            </ul>
+            <ul class="pagination">
+                <li class="pagination-item arrow first"><button type="button" class="btn"></button></li>
+                <li class="pagination-item arrow prev"><button type="button" class="btn"></button></li>
+                <li class="pagination-item">
+                    <button type="button" class="btn active">1</button>
+                    <button type="button" class="btn">2</button>
+                    <button type="button" class="btn">3</button>
+                </li>
+                <li class="pagination-item arrow next"><button type="button" class="btn"></button></li>
+                <li class="pagination-item arrow last"><button type="button" class="btn"></button></li>
+            </ul>
+            <div class="mypage-guide">
+                <div class="tit">잊지 말고 꼭 확인해 주세요!</div>
+                <div class="sub">대금지급 관련 안내</div>
+                <ul class="text">
+                    <li class="text-item">
+                        <strong>정산 정보를 꼭 입력해야 정상적으로 대금 지급이 완료돼요.</strong>
+                    </li>
+                    <li class="text-item">
+                        기업 히어로즈의 경우 ‘정산 정보’ 중 ‘수익금 입금 계좌’의 계좌명이 기업(사업자)명과 달라도 대금 지급은 완료되지만, <strong>사업용 계좌 거래로 인정되지 않아 발생할 수 있는 가산세 부과에 대해서 AI 히어로즈는 책임이 없음을 알려드려요.</strong>
+                    </li>
+                    <li class="text-item">
+                        계약서에 따라 지급 형태가 선금 / 중도금 / 잔금으로 나누어질 경우, 세금계산서는 각각 별도 발행돼요.
+                    </li>
+                    <li class="text-item">
+                        선금 / 중도금 / 잔금 지급과 일정은 계약서 기반으로 실행돼요.
+                    </li>
+                    <li class="text-item">
+                        <strong>AI 히어로즈의 중개 수수료는 10%이며, 정산 시 수수료와 세금을 제외한 나머지 금액이 입금돼요.</strong>
+                    </li>
+                    <li class="text-item">
+                        지급 형태와 관계없이, AI 히어로즈는 선금 단계에서 전체 금액의 수수료 10%를 취득해요.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-wrap">
+        <div class="footer-logo"></div>
+        <div class="footer-info">
+            <div class="footer-menu">
+                <button type="button" class="btn">기업소개</button>
+                <button type="button" class="btn">이용약관</button>
+                <button type="button" class="btn">개인정보처리방침</button>
+                <button type="button" class="btn">고객센터</button>
+            </div>
+            <div class="text">
+                (주)알체라(대표이사:황영규) | 경기도 성남시 분당구 판교로256번길 25 GB2빌딩 C동 7층<br />
+                통신판매업신고  : 2018-성남분당-0205 | 사업자등록번호: 643-87-00337
+            </div>
+            <div class="text">
+                ⓒ 2023 Alchera Inc.
+            </div>
+        </div>
+        <div class="footer-sns">
+            <button type="button" class="btn sns-1"></button>
+            <button type="button" class="btn sns-2"></button>
+            <button type="button" class="btn sns-3"></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    var selects = document.getElementsByClassName('input-select')
+    for( var i = 0; i < selects.length; i++ ){
+        new SlimSelect({
+            select: document.getElementsByClassName('input-select')[i]
+        })
+    }
+</script>
+
+</body>
 </html>
