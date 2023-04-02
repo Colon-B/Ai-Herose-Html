@@ -42,6 +42,9 @@ html{
 	font-weight: 500;
 	font-size: 10px;
 	letter-spacing: -0.003em;
+	@media (max-width: $mo) {
+			font-size: 9px;
+	}
 }
 
 /* HTML5 display-role reset for older browsers */
