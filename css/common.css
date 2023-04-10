@@ -4158,6 +4158,23 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   margin: 0 0 4px 0;
 }
 
+.modal-con.terms {
+  width: 950px;
+  padding: 70px 50px;
+}
+
+.modal-con.terms .modal-tit {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 20px 0;
+}
+
+.modal-con.terms .terms-con {
+  max-height: calc(100vh - 400px);
+  overflow-y: auto;
+  padding-right: 20px;
+}
+
 .modal-con .text-box {
   font-size: 1.4rem;
   color: #666;
@@ -4194,6 +4211,10 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   }
   .modal-con.message .text {
     width: 100%;
+  }
+  .modal-con.terms {
+    width: 90%;
+    padding: 50px 40px;
   }
   .modal-con .btn-wrap .btn-lg {
     width: 100%;

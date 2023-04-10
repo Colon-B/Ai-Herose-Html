@@ -3144,6 +3144,20 @@ input{
                 }
             }
         }
+        &.terms{
+            width:950px;
+            padding:70px 50px;
+            .modal-tit{
+                border-top:1px solid #000;
+                border-bottom:1px solid #000;
+                padding:20px 0;
+            }
+            .terms-con{
+                max-height: calc(100vh - 400px);
+                overflow-y:auto;
+                padding-right: 20px;
+            }
+        }
         .text-box{
             font-size:1.4rem;
             color:$textCol2;
@@ -3179,6 +3193,10 @@ input{
                 .text{
                     width:100%;
                 }
+            }
+            &.terms{
+                width:90%;
+                padding:50px 40px;
             }
             .btn-wrap{
                 .btn-lg{
