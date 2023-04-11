@@ -1185,10 +1185,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   border-color: #0BB899;
 }
 
-.input-text.type2 {
-  caret-color: #333;
-}
-
 .input-text.type2:focus {
   border-color: #eee;
 }
@@ -3399,6 +3395,10 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   font-weight: 700;
   color: #000;
   padding: 0 110px 0 30px;
+}
+
+.main-search .input-text:focus {
+  border: 2px solid #00FF85;
 }
 
 .main-search .input-text::-webkit-input-placeholder {

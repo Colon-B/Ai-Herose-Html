@@ -872,7 +872,6 @@ input{
             border-color:$colSub;
         }
         &.type2{
-            caret-color: $textCol1;
             &:focus{
                 border-color:$colLine;
             }
@@ -2570,6 +2569,9 @@ input{
             font-weight: 700;
             color:#000;
             padding:0 110px 0 30px;
+            &:focus{
+                border:2px solid $colPrimary;
+            }
             &::placeholder{
                 color:$colGrey;
             }
