@@ -3131,11 +3131,16 @@ input{
                 .sm{
                     width:40%;
                     margin-left:10px;
+                    white-space: nowrap;
                     & + *{
                         margin-left:10px;
                     }
                     &:first-child{
                         margin-left:0;
+                    }
+                    @media (max-width: $mo){
+                        width:100%;
+                        margin-bottom:10px;
                     }
                 }
                 .input-wrap{

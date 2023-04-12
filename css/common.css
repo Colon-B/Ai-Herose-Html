@@ -4140,6 +4140,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .modal-con.message .input .sm {
   width: 40%;
   margin-left: 10px;
+  white-space: nowrap;
 }
 
 .modal-con.message .input .sm + * {
@@ -4148,6 +4149,13 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 .modal-con.message .input .sm:first-child {
   margin-left: 0;
+}
+
+@media (max-width: 660px) {
+  .modal-con.message .input .sm {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 .modal-con.message .input .input-wrap {
