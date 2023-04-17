@@ -6,13 +6,12 @@
 아이콘
 ***********/
 @font-face {
-  font-family: 'Pretendard Variable';
+  font-family: "Pretendard Variable";
   font-weight: 45 920;
   font-style: normal;
   font-display: swap;
   src: local("Pretendard Variable"), url("./fonts/PretendardVariable.woff2") format("woff2-variations");
 }
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -32,8 +31,7 @@ time, mark, audio, video, textarea, input, select {
   font-size: 100%;
   font-family: "Pretendard Variable", sans-serif;
   color: #333;
-  vertical-align: baseline;
-  /* a안 img가 들어갈 때 a를 위로 정렬시켜 여백을 없앨 때 사용 */
+  vertical-align: baseline; /* a안 img가 들어갈 때 a를 위로 정렬시켜 여백을 없앨 때 사용 */
 }
 
 html, body {
@@ -48,7 +46,6 @@ html {
   font-size: 10px;
   letter-spacing: -0.003em;
 }
-
 @media (max-width: 660px) {
   html {
     font-size: 9px;
@@ -62,8 +59,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-  line-height: 1;
-  /* 한글 기준은 1.2 */
+  line-height: 1; /* 한글 기준은 1.2 */
 }
 
 ol, ul {
@@ -76,7 +72,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -114,7 +110,6 @@ input[type=password] {
 }
 
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -132,5 +127,4 @@ select::-ms-expand {
 b {
   color: inherit;
   font-family: inherit;
-}
-/*# sourceMappingURL=reset.css.map */
+}/*# sourceMappingURL=reset.css.map */
