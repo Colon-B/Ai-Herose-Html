@@ -89,6 +89,9 @@ body, html {
         &-40{
             margin-top:20px !important;
         }
+        &-70{
+            margin-top:35px !important;
+        }
         &-100{
             margin-top:50px !important;
         }
@@ -137,6 +140,7 @@ body, html {
     align-items: center;
     justify-content: center;
     transition:all .3s;
+    color:#333;
     &:disabled{
         background-color:#D6D6D6 !important;
         color:#fff !important;
@@ -1010,6 +1014,9 @@ input{
             display:inline-flex;
             align-items: center;
             padding:7px 10px;
+            @media (max-width: $mo) {
+                width:32.8%;
+            }
             .box{
                 margin-top:2px;
                 &:after{
@@ -2143,7 +2150,7 @@ input{
                 .alarm-list{
                     position:fixed;
                     left:0;
-                    top:0;
+                    top:55px;
                     right:0;
                     bottom:0;
                     max-height: unset;
@@ -2749,6 +2756,9 @@ input{
                 position:absolute;
                 left:calc(50% - 150px);
                 bottom:100px;
+                @media (max-width: $mo) {
+                    left:10%;
+                }
             }
         }
     }
@@ -3283,7 +3293,7 @@ input{
         margin-left:10px;
     }
     @media (max-width: $mo) {
-        margin:20px 0 50px;
+        margin:20px 0 40px;
     }
 }
 

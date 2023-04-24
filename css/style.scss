@@ -63,6 +63,10 @@
         .thumb-list--item{
             .image-wrap{
                 height:172px;
+                img{
+                    min-width: 100%;
+                    min-height: 100%;
+                }
             }
             .text-wrap{
                 padding:20px 30px;
@@ -791,6 +795,13 @@
                 margin-right: 0;
             }
         }
+    }
+    &-link{
+        font-size:1.6rem;
+        font-weight: 600;
+        margin:26px 0;
+        padding-left:20px;
+        background:url(../images/icon/arrow_down.svg)no-repeat left center;
     }
     @media (max-width: $mo){
         &-table{
@@ -2081,7 +2092,7 @@
         }
         & > .right{
             width:100%;
-            margin:0;
+            margin:20px 0 0;
         }
     }
     @media (max-width: $mo) {
@@ -4191,6 +4202,7 @@
                 display:flex;
                 cursor: pointer;
                 position:relative;
+                line-height:1.4;
                 .left, .right{
                     white-space: nowrap;
                 }
@@ -5408,6 +5420,13 @@
                         justify-content: flex-end;
                         &:before{
                             display:none;
+                        }
+                    }
+                    &.type-mo{
+                        flex-wrap: nowrap;
+                        white-space: nowrap;
+                        .state{
+                            margin-top:0;
                         }
                     }
                 }
