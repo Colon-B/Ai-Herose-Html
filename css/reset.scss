@@ -1,12 +1,47 @@
 @charset "utf-8";
 @import "global.scss";
 
-@font-face {
-	font-family: 'Pretendard Variable';
-	font-weight: 45 920;
-	font-style: normal;
-	font-display: swap;
-	src: local('Pretendard Variable'), url('./fonts/PretendardVariable.woff2') format('woff2-variations');
+// @font-face {
+// 	font-family: 'Pretendard Variable';
+// 	font-weight: 45 920;
+// 	font-style: normal;
+// 	font-display: swap;
+// 	src: local('Pretendard Variable'), url('./fonts/PretendardVariable.woff2') format('woff2-variations');
+// } 
+
+@each $fonts in 1, 2, 3, 4, 5, 6, 7, 8, 9{
+	@font-face {
+		font-family: $font;
+		src: url('./fonts/#{$font}#{$fonts}.woff') format('woff');
+		@if $fonts ==1 {
+			font-weight: 100;
+		}
+		@else if $fonts ==2 {
+			font-weight: 200;
+		}
+		@else if $fonts ==3 {
+			font-weight: 300;
+		}
+		@else if $fonts ==4 {
+			font-weight: 400;
+		}
+		@else if $fonts ==5 {
+			font-weight: 500;
+		}
+		@else if $fonts ==6 {
+			font-weight: 600;
+		}
+		@else if $fonts ==7 {
+			font-weight: 700;
+		}
+		@else if $fonts ==8 {
+			font-weight: 800;
+		}
+		@else if $fonts ==9 {
+			font-weight: 900;
+		}
+		font-style: normal;
+	}
 }
 
 // 디폴트 설정
