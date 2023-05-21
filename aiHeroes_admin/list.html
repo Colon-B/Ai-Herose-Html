@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport">
+<head>
+    <meta charset="UTF-8">
+    <title>aiHeroes_admin</title>
+    <link href="./css/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="./css/datepicker.css" />
+    <script src="./js/datepicker.js"></script>
+    <link rel="stylesheet" href="./css/slimselect.css" />
+    <script src="./js/slimselect.min.js"></script>
+</head>
+<body>
+
+<div class="header">
+    <div class="left">
+        <h1 class="tit">AI히어로즈 관리자 시스템</h1>
+    </div>
+    <div class="right">
+        <div class="menu">
+            <button type="button" class="btn active">회원관리</button>
+            <button type="button" class="btn">프로젝트 관리</button>
+            <button type="button" class="btn">정산 관리</button>
+            <button type="button" class="btn">CS 관리</button>
+            <button type="button" class="btn">통계</button>
+        </div>
+        <div class="sub-menu">
+            <button type="button" class="btn">이용가이드</button>
+            <button type="button" class="btn alarm"></button>
+            <button type="button" class="btn user" onclick="toggleActive(this)">홍길동 매니저 님</button>
+            <div  class="sub-drop">
+                <div class="top">등급: 일반관리자</div>
+                <div class="menu-list">
+                    <button type="button" class="btn active">프로젝트 승인 요청</button>
+                    <button type="button" class="btn">프로젝트 등록 요청(12)</button>
+                    <button type="button" class="btn">신규 미팅 요청 프로젝트</button>
+                    <button type="button" class="btn">계약 요청 프로젝트</button>
+                    <button type="button" class="btn">TASK 정정 프로젝트</button>
+                    <button type="button" class="btn">정산 요청 프로젝트</button>
+                </div>
+                <button type="button" class="btn logout">로그아웃</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="container-tit">통합검색</div>
+    <div class="container-count">
+        <button class="btn">
+            전체 <strong class="num">2,145</strong>건
+        </button>
+        <button class="btn">
+            활동 <strong class="num">2,145</strong>건
+        </button>
+        <button class="btn">
+            휴면 <strong class="num">2,145</strong>건
+        </button>
+        <button class="btn">
+            탈퇴 <strong class="num">2,145</strong>건
+        </button>
+    </div>
+    <div class="section">
+        <div class="section-tit">조회 조건 설정</div>
+        <div class="table-wrap">
+            <table class="table">
+                <colgroup>
+                    <col width="15%" />
+                    <col width="35%" />
+                    <col width="15%" />
+                    <col width="35%" />
+                </colgroup>
+                <tr>
+                    <th>활동 구분</th>
+                    <td>
+                        <label class="input-radio">
+                            <input type="radio" name="radio1" checked />
+                            <span class="box"></span>
+                            <span class="text">전체</span>
+                        </label>
+                        <label class="input-radio">
+                            <input type="radio" name="radio1" />
+                            <span class="box"></span>
+                            <span class="text">활동</span>
+                        </label>
+                        <label class="input-radio">
+                            <input type="radio" name="radio1" />
+                            <span class="box"></span>
+                            <span class="text">휴면</span>
+                        </label>
+                        <label class="input-radio">
+                            <input type="radio" name="radio1" />
+                            <span class="box"></span>
+                            <span class="text">탈퇴</span>
+                        </label>
+                    </td>
+                    <th>회원 유형</th>
+                    <td>
+                        <label class="input-radio">
+                            <input type="radio" name="radio2" checked />
+                            <span class="box"></span>
+                            <span class="text">전체</span>
+                        </label>
+                        <label class="input-radio">
+                            <input type="radio" name="radio2" />
+                            <span class="box"></span>
+                            <span class="text">개인</span>
+                        </label>
+                        <label class="input-radio">
+                            <input type="radio" name="radio2" />
+                            <span class="box"></span>
+                            <span class="text">기업</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>회원 구분</th>
+                    <td>
+                        <label class="input-radio">
+                            <input type="radio" name="radio3" checked />
+                            <span class="box"></span>
+                            <span class="text">전체</span>
+                        </label>
+                        <label class="input-radio">
+                            <input type="radio" name="radio3" />
+                            <span class="box"></span>
+                            <span class="text">회원</span>
+                        </label>
+                        <label class="input-radio">
+                            <input type="radio" name="radio3" />
+                            <span class="box"></span>
+                            <span class="text">매니저</span>
+                        </label>
+                    </td>
+                    <th>히어로즈 권한 분류</th>
+                    <td>
+                        <label class="input-radio">
+                            <input type="radio" name="radio4" checked />
+                            <span class="box"></span>
+                            <span class="text">전체</span>
+                        </label>
+                        <label class="input-radio">
+                            <input type="radio" name="radio4" />
+                            <span class="box"></span>
+                            <span class="text">보유</span>
+                        </label>
+                        <label class="input-radio">
+                            <input type="radio" name="radio4" />
+                            <span class="box"></span>
+                            <span class="text">미보유</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>기간 검색</th>
+                    <td colspan="3">
+                        <div class="input-wrap">
+                            <label class="input-radio">
+                                <input type="radio" name="radio5" checked />
+                                <span class="text-box">오늘</span>
+                            </label>
+                            <label class="input-radio">
+                                <input type="radio" name="radio5" />
+                                <span class="text-box">1주일</span>
+                            </label>
+                            <label class="input-radio">
+                                <input type="radio" name="radio5" />
+                                <span class="text-box">1개월</span>
+                            </label>
+                            <label class="input-radio">
+                                <input type="radio" name="radio5" />
+                                <span class="text-box">3개월</span>
+                            </label>
+                            <label class="input-radio">
+                                <input type="radio" name="radio5" />
+                                <span class="text-box">6개월</span>
+                            </label>
+                            <input type="text" class="input-text input-date sm" />
+                            <span>~</span>
+                            <input type="text" class="input-text input-date sm" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>상세 검색</th>
+                    <td colspan="3">
+                        <input type="text" class="input-text" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="btn-wrap">
+            <button type="button" class="btn btn-md btn-grey">초기화</button>
+            <button type="button" class="btn btn-md btn-primary">검색</button>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-tit">
+            조회결과 (총<span class="txt-c--primary">36,413</span>건)
+            <div class="right">
+                <select class="input-select">
+                    <option>50개씩 보기</option>
+                    <option>100개씩 보기</option>
+                </select>
+                <button type="button" class="btn btn-sm btn-grey excel">엑셀 다운로드</button>
+            </div>
+        </div>
+        <div class="table-wrap center">
+            <div class="table-top">
+                <button type="button" class="btn btn-grey btn-sm">SMS 발송</button>
+                <button type="button" class="btn btn-grey btn-sm">임시비번 발송</button>
+                <button type="button" class="btn btn-grey btn-sm div">탈퇴처리</button>
+                <button type="button" class="btn btn-danger btn-sm div">게시 중지</button>
+            </div>
+            <table class="table">
+                <tr>
+                    <th>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="box"></span>
+                        </label>
+                    </th>
+                    <th>회원번호</th>
+                    <th>활동구분</th>
+                    <th>회원구분</th>
+                    <th>회원유형</th>
+                    <th>히어로즈 권한</th>
+                    <th>가입채널</th>
+                    <th>회원명</th>
+                    <th>이메일</th>
+                    <th>연락처</th>
+                    <th>회사명</th>
+                    <th>운영프로젝트</th>
+                    <th>접근가능메뉴</th>
+                    <th>가입일</th>
+                    <th>휴면일</th>
+                    <th>탈퇴일</th>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="box"></span>
+                        </label>
+                    </td>
+                    <td>1234</td>
+                    <td>활동</td>
+                    <td>회원</td>
+                    <td>개인</td>
+                    <td>미보유</td>
+                    <td>일반가입</td>
+                    <td><button type="button" class="btn btn-link">홍길동</button></td>
+                    <td>asd@asd.asd</td>
+                    <td>010-1111-1111</td>
+                    <td>-</td>
+                    <td>51</td>
+                    <td>-</td>
+                    <td>2022.02.02</td>
+                    <td>2022.02.02</td>
+                    <td>2022.02.02</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="box"></span>
+                        </label>
+                    </td>
+                    <td>1234</td>
+                    <td>활동</td>
+                    <td>회원</td>
+                    <td>개인</td>
+                    <td>미보유</td>
+                    <td>일반가입</td>
+                    <td><button type="button" class="btn btn-link">홍길동</button></td>
+                    <td>asd@asd.asd</td>
+                    <td>010-1111-1111</td>
+                    <td>-</td>
+                    <td>51</td>
+                    <td>-</td>
+                    <td>2022.02.02</td>
+                    <td>2022.02.02</td>
+                    <td>2022.02.02</td>
+                </tr>
+            </table>
+            <div class="table-bottom">
+                <div class="right">
+                    <button type="button" class="btn prev"></button>
+                    <input type="text" class="input-text xsm" value="1" />
+                    <span>~</span>
+                    <input type="text" class="input-text xsm" value="600" />
+                    <button type="button" class="btn next"></button>
+                    <button type="button" class="btn btn-sm btn-grey">이동</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var dates = document.getElementsByClassName('input-date')
+    for( var i = 0; i < dates.length; i++ ){
+        var datepicker = new Datepicker(dates[i], {
+            language:'ko',
+            format:'yyyy-mm-dd'
+        }); 
+    }
+    var selects = document.getElementsByClassName('input-select')
+    for( var i = 0; i < selects.length; i++ ){
+        new SlimSelect({
+            select: document.getElementsByClassName('input-select')[i]
+        })
+    }
+    function toggleActive(target){
+        target.classList.contains('active') ? target.classList.remove('active') : target.classList.add('active')
+    }
+</script>
+
+</body>
+</html>

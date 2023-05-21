@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport">
+<head>
+    <meta charset="UTF-8">
+    <title>aiHeroes_admin</title>
+    <link href="./css/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="./css/datepicker.css" />
+    <script src="./js/datepicker.js"></script>
+    <link rel="stylesheet" href="./css/slimselect.css" />
+    <script src="./js/slimselect.min.js"></script>
+</head>
+<body>
+
+<div class="header">
+    <div class="left">
+        <h1 class="tit">AI히어로즈 관리자 시스템</h1>
+    </div>
+    <div class="right">
+        <div class="menu">
+            <button type="button" class="btn active">회원관리</button>
+            <button type="button" class="btn">프로젝트 관리</button>
+            <button type="button" class="btn">정산 관리</button>
+            <button type="button" class="btn">CS 관리</button>
+            <button type="button" class="btn">통계</button>
+        </div>
+        <div class="sub-menu">
+            <button type="button" class="btn">이용가이드</button>
+            <button type="button" class="btn alarm"></button>
+            <button type="button" class="btn user" onclick="toggleActive(this)">홍길동 매니저 님</button>
+            <div  class="sub-drop">
+                <div class="top">등급: 일반관리자</div>
+                <div class="menu-list">
+                    <button type="button" class="btn active">프로젝트 승인 요청</button>
+                    <button type="button" class="btn">프로젝트 등록 요청(12)</button>
+                    <button type="button" class="btn">신규 미팅 요청 프로젝트</button>
+                    <button type="button" class="btn">계약 요청 프로젝트</button>
+                    <button type="button" class="btn">TASK 정정 프로젝트</button>
+                    <button type="button" class="btn">정산 요청 프로젝트</button>
+                </div>
+                <button type="button" class="btn logout">로그아웃</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="container-tit">상세 내역</div>
+    <div class="section">
+        <div class="section-tit">컨설팅 신청 내역</div>
+        <div class="table-wrap center">
+            <table class="table">
+                <tr>
+                    <th>회차</th>
+                    <th>회원명</th>
+                    <th>회원ID</th>
+                    <th>연락처</th>
+                    <th>신청일시</th>
+                    <th>컨설팅 분류</th>
+                    <th>요청 상세 내용 보기</th>
+                    <th>담당자 확인</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>김재석</td>
+                    <td>asd@asd.asd</td>
+                    <td>010-1111-1111</td>
+                    <td>2022.05.12 15:00</td>
+                    <td>동영상</td>
+                    <td><button type="button" class="btn btn-link">상세 내용 보기</button></td>
+                    <td>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="box"></span>
+                        </label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-tit">프로젝트 기본 정보</div>
+        <div class="table-wrap view">
+            <table class="table">
+                <colgroup>
+                    <col width="13%" />
+                    <col width="20%" />
+                    <col width="13%" />
+                    <col width="20%" />
+                    <col width="13%" />
+                    <col width="20%" />
+                </colgroup>
+                <tr>
+                    <th>프로젝트 번호</th>
+                    <td>121212</td>
+                    <th>프로젝트 생성일</th>
+                    <td>2022.05.05</td>
+                    <th>프로젝트 승인일</th>
+                    <td>2022.05.05</td>
+                </tr>
+                <tr>
+                    <th>클라이언트</th>
+                    <td><button type="button" class="btn btn-link">김길동</button></td>
+                    <th>히어로즈</th>
+                    <td><button type="button" class="btn btn-link">김길동</button></td>
+                    <th>담당매니저</th>
+                    <td><button type="button" class="btn btn-link">김길동</button></td>
+                </tr>
+                <tr>
+                    <th>프로젝트명</th>
+                    <td colspan="5"><button type="button" class="btn btn-link">AI 음성 데이터 분석</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-tit">프로젝트 진행 단계</div>
+        <div class="state-wrap">
+            <div class="left">
+                <div class="box active">기본정보</div>
+                <div class="box">승인내역</div>
+                <div class="box">지원 팀 미팅 설정</div>
+                <div class="box">계약 진행</div>
+                <div class="box">프로젝트 진행</div>
+                <div class="box">모델 검증</div>
+                <div class="box">프로젝트 완료</div>
+            </div>
+            <div class="right">
+                <button type="button" class="btn btn-sm btn-sub">프로젝트 승인</button>
+            </div>
+        </div>
+        <div class="table-wrap view">
+            <table class="table">
+                <colgroup>
+                    <col width="13%" />
+                    <col width="37%" />
+                    <col width="13%" />
+                    <col width="37%" />
+                </colgroup>
+                <tr>
+                    <th>프로젝트 구분</th>
+                    <td>개인프로젝트</td>
+                    <th>기간</th>
+                    <td>3개월</td>
+                </tr>
+                <tr>
+                    <th>예산</th>
+                    <td>400만원 ~ 2,000만원</td>
+                    <th>진행 방식</th>
+                    <td>상주, 원격 모두 가능</td>
+                </tr>
+                <tr>
+                    <th>희망 급여방식</th>
+                    <td>월급 / 100만원</td>
+                    <th>근무형태</th>
+                    <td>외주 근무</td>
+                </tr>
+                <tr>
+                    <th>AI 산업 분야</th>
+                    <td>교육, 서비스</td>
+                    <th>AI 기술 분야</th>
+                    <td>영상, 이미지</td>
+                </tr>
+                <tr>
+                    <th>관심 AI 테스트 및 기술</th>
+                    <td>Deep Learning</td>
+                    <th>프로그래밍 프레임워크</th>
+                    <td>Python</td>
+                </tr>
+                <tr>
+                    <th>프로젝트 상세 설명</th>
+                    <td colspan="3">설명</td>
+                </tr>
+                <tr>
+                    <th>프로젝트 관련 파일</th>
+                    <td colspan="3">
+                        <div class="input-wrap file-list">
+                            <button type="button" class="btn btn-link">음성 프로젝트 데이터 파일.pdf</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="section">
+        <div class="col">
+            <div class="col-6">
+                <div class="section-tit">프로젝트 진행 히스토리</div>
+                <ul class="history-list">
+                    <li class="history-list--item active">프로젝트 승인 대기 중 입니다. (22.05.05 15:44)</li>
+                    <li class="history-list--item">프로젝트 승인 되었습니다. (22.05.05 15:44)</li>
+                    <li class="history-list--item">프로젝트 매칭 중 입니다. (22.05.05 15:44)</li>
+                    <li class="history-list--item">프로젝트 미팅이 송신 되었습니다. [최대석 담당 매니저 | 김길동 클라이언트 | (주)ac히어로즈] (22.05.05 15:44)</li>
+                    <li class="history-list--item">프로젝트 계약서가 발송 되었습니다. (22.05.05 15:44)</li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <div class="section-tit">프로젝트 관련 메모</div>
+                <div class="table-wrap center">
+                    <div class="table-top">
+                        <div class="txt-right">
+                            <button type="button" class="btn btn-link">메모 추가+</button>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <tr>
+                            <th>번호</th>
+                            <th>작성일</th>
+                            <th>담당 매니저</th>
+                            <th>작성 메모</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="txt-c--grey">등록된 메모가 없습니다.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-tit">지원 리스트</div>
+        <div class="col">
+            <div class="col-6">
+                <div class="black-tit">히어로즈 리스트</div>
+                <table class="table">
+                    <tr>
+                        <th>
+                            <label class="input-checkbox">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                            </label>
+                        </th>
+                        <th>히어로즈명</th>
+                        <th>구분</th>
+                        <th>경력</th>
+                        <th>견적</th>
+                        <th>지원일시</th>
+                        <th>프로젝트 완료건</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="input-checkbox">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                            </label>
+                        </td>
+                        <td><button type="button" class="btn btn-link">홍길동</button></td>
+                        <td>개인</td>
+                        <td>2년</td>
+                        <td>100~1,000만원</td>
+                        <td>2022.12.12 09:10</td>
+                        <td>77건</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="input-checkbox">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                            </label>
+                        </td>
+                        <td><button type="button" class="btn btn-link">홍길동</button></td>
+                        <td>개인</td>
+                        <td>2년</td>
+                        <td>100~1,000만원</td>
+                        <td>2022.12.12 09:10</td>
+                        <td>77건</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="control">
+                <button type="button" class="btn btn-sm btn-primary">추가 &gt;</button>
+                <button type="button" class="btn btn-sm btn-danger">&lt; 제거</button>
+            </div>
+            <div class="col-6">
+                <div class="black-tit">미팅 리스트</div>
+                <table class="table">
+                    <tr>
+                        <th>
+                            <label class="input-checkbox">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                            </label>
+                        </th>
+                        <th>히어로즈명</th>
+                        <th>구분</th>
+                        <th>경력</th>
+                        <th>견적</th>
+                        <th>지원일시</th>
+                        <th>프로젝트 완료건</th>
+                        <th>미팅설정</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="input-checkbox">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                            </label>
+                        </td>
+                        <td><button type="button" class="btn btn-link">홍길동</button></td>
+                        <td>개인</td>
+                        <td>2년</td>
+                        <td>100~1,000만원</td>
+                        <td>2022.12.12 09:10</td>
+                        <td>77건</td>
+                        <td><button type="button" class="btn btn-link">미팅설정</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="input-checkbox">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                            </label>
+                        </td>
+                        <td><button type="button" class="btn btn-link">홍길동</button></td>
+                        <td>개인</td>
+                        <td>2년</td>
+                        <td>100~1,000만원</td>
+                        <td>2022.12.12 09:10</td>
+                        <td>77건</td>
+                        <td><button type="button" class="btn btn-link">미팅설정</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="btn-wrap right">
+            <button type="button" class="btn btn-md btn-primary">계약 팀 선정 &gt;</button>
+        </div>
+    </div>
+</div>
+<div class="com-dim">
+    강제 완료 처리된 프로젝트 입니다.<br />
+    강제 완료 처리된 프로젝트의 정보는 공개되지 않습니다.
+</div>
+
+<script>
+    var dates = document.getElementsByClassName('input-date')
+    for( var i = 0; i < dates.length; i++ ){
+        var datepicker = new Datepicker(dates[i], {
+            language:'ko',
+            format:'yyyy-mm-dd'
+        }); 
+    }
+    var selects = document.getElementsByClassName('input-select')
+    for( var i = 0; i < selects.length; i++ ){
+        new SlimSelect({
+            select: document.getElementsByClassName('input-select')[i]
+        })
+    }
+    function toggleActive(target){
+        target.classList.contains('active') ? target.classList.remove('active') : target.classList.add('active')
+    }
+</script>
+
+</body>
+</html>

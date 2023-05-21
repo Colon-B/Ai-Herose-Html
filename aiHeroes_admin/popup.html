@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport">
+<head>
+    <meta charset="UTF-8">
+    <title>aiHeroes_admin</title>
+    <link href="./css/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<div class="header">
+    <div class="left">
+        <h1 class="tit">AI히어로즈 관리자 시스템</h1>
+    </div>
+    <div class="right">
+        <div class="menu">
+            <button type="button" class="btn active">회원관리</button>
+            <button type="button" class="btn">프로젝트 관리</button>
+            <button type="button" class="btn">정산 관리</button>
+            <button type="button" class="btn">CS 관리</button>
+            <button type="button" class="btn">통계</button>
+        </div>
+        <div class="sub-menu">
+            <button type="button" class="btn">이용가이드</button>
+            <button type="button" class="btn alarm"></button>
+            <button type="button" class="btn user">홍길동 매니저 님</button>
+            <div  class="sub-drop">
+                <div class="top">등급: 일반관리자</div>
+                <div class="menu-list">
+                    <button type="button" class="btn active">프로젝트 승인 요청</button>
+                    <button type="button" class="btn">프로젝트 등록 요청(12)</button>
+                    <button type="button" class="btn">신규 미팅 요청 프로젝트</button>
+                    <button type="button" class="btn">계약 요청 프로젝트</button>
+                    <button type="button" class="btn">TASK 정정 프로젝트</button>
+                    <button type="button" class="btn">정산 요청 프로젝트</button>
+                </div>
+                <button type="button" class="btn logout">로그아웃</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="section">
+        <div class="input-wrap">
+            <button type="button" class="btn btn-md btn-primary" onclick="modalOpen(modal1)">alert</button>
+            <button type="button" class="btn btn-md btn-primary" onclick="modalOpen(modal2)">confirm</button>
+        </div>
+        <div class="input-wrap">
+            <button type="button" class="btn btn-md btn-primary" onclick="modalOpen(modal3)">table</button>
+            <button type="button" class="btn btn-md btn-primary" onclick="modalOpen(modal4)">user</button>
+        </div>
+    </div>    
+</div>
+
+<div class="modal" id="modal1">
+    <div class="modal-dim"></div>
+    <div class="modal-con">
+        <div class="modal-tit">
+            alert
+            <button type="button" class="btn btn-close" onclick="modalClose(modal1)">&times;</button>
+        </div>
+        <div class="alert-message">
+            alert popup contents
+        </div>
+        <div class="btn-wrap">
+            <button type="button" class="btn btn-md btn-primary" onclick="modalClose(modal1)">확인</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modal2">
+    <div class="modal-dim"></div>
+    <div class="modal-con">
+        <div class="modal-tit">
+            confirm
+            <button type="button" class="btn btn-close" onclick="modalClose(modal2)">&times;</button>
+        </div>
+        <div class="alert-message">
+            confirm popup contents
+        </div>
+        <div class="btn-wrap">
+            <button type="button" class="btn btn-md btn-grey" onclick="modalClose(modal2)">취소</button>
+            <button type="button" class="btn btn-md btn-primary" onclick="modalClose(modal2)">확인</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modal3">
+    <div class="modal-dim"></div>
+    <div class="modal-con">
+        <div class="modal-tit">
+            table
+            <button type="button" class="btn btn-close" onclick="modalClose(modal3)">&times;</button>
+        </div>
+        <div class="section">
+            <div class="section-tit">테이블 타이틀</div>
+            <div class="table-wrap center">
+                <table class="table">
+                    <tr>
+                        <th>th</th>
+                        <th>th</th>
+                        <th>th</th>
+                    </tr>
+                    <tr>
+                        <td>td</td>
+                        <td>td</td>
+                        <td>td</td>
+                    </tr>
+                    <tr>
+                        <td>td</td>
+                        <td>td</td>
+                        <td>td</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-tit">테이블 타이틀</div>
+            <div class="table-wrap center">
+                <table class="table">
+                    <tr>
+                        <th>th</th>
+                        <td>td</td>
+                    </tr>
+                    <tr>
+                        <th>th</th>
+                        <td>td</td>
+                    </tr>
+                    <tr>
+                        <th>th</th>
+                        <td>td</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="btn-wrap">
+            <button type="button" class="btn btn-md btn-grey" onclick="modalClose(modal3)">취소</button>
+            <button type="button" class="btn btn-md btn-primary" onclick="modalClose(modal3)">확인</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modal4">
+    <div class="modal-dim"></div>
+    <div class="modal-con user">
+        <div class="modal-tit">
+            user
+            <button type="button" class="btn btn-close" onclick="modalClose(modal4)">&times;</button>
+        </div>
+        <div class="section">
+            <div class="container-tit">
+                회원정보
+                <div class="right">
+                    <label class="input-radio">
+                        <input type="radio" name="radio1" checked />
+                        <span class="box"></span>
+                        <span class="text">회원명</span>
+                    </label>
+                    <label class="input-radio">
+                        <input type="radio" name="radio1" />
+                        <span class="box"></span>
+                        <span class="text">아이디</span>
+                    </label>
+                    <label class="input-radio">
+                        <input type="radio" name="radio1" />
+                        <span class="box"></span>
+                        <span class="text">연락처</span>
+                    </label>
+                    <input type="text" class="input-text sm" />
+                    <button type="button" class="btn btn-sm btn-primary">검색</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="col-3">
+                    <div class="user">
+                        <div class="user-top">
+                            <div class="name">홍길동 님(등급뱃지)</div>
+                            <div class="info">회원유형: 클라이언트 회원</div>
+                            <div class="info">ID: <button type="button" class="btn btn-link">asd@asd.asd</button></div>
+                            <div class="info">최근로그인: 2022.01.01 15:15:18</div>
+                        </div>
+                        <div class="user-count">
+                            <div class="line">
+                                <label>총 프로젝트 의뢰건</label>
+                                <div class="count">
+                                    <input type="text" value="10" />건
+                                </div>
+                            </div>
+                            <div class="line">
+                                <label>승인 단계</label>
+                                <div class="count">
+                                    <input type="text" value="10" />건
+                                </div>
+                            </div>
+                            <div class="line">
+                                <label>매칭 단계</label>
+                                <div class="count">
+                                    <input type="text" value="10" />건
+                                </div>
+                            </div>
+                            <div class="line">
+                                <label>미팅 단계</label>
+                                <div class="count">
+                                    <input type="text" value="10" />건
+                                </div>
+                            </div>
+                            <div class="line">
+                                <label>계약 단계</label>
+                                <div class="count">
+                                    <input type="text" value="10" />건
+                                </div>
+                            </div>
+                            <div class="line">
+                                <label>진행 중 프로젝트</label>
+                                <div class="count">
+                                    <input type="text" value="10" />건
+                                </div>
+                            </div>
+                            <div class="line">
+                                <label>총 프로젝트 의뢰 금액</label>
+                                <div class="count">
+                                    <input type="text" value="2,242,232,232" />원
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-count">
+                            <div class="line">
+                                <label>커뮤니티 등록 건</label>
+                                <div class="count">
+                                    <input type="text" value="10" />건
+                                </div>
+                            </div>
+                            <div class="line">
+                                <label>댓글 작성 건</label>
+                                <div class="count">
+                                    <input type="text" value="10" />건
+                                </div>
+                            </div>
+                            <div class="line">
+                                <label>신규 1:1 문의 건</label>
+                                <div class="count">
+                                    <input type="text" value="10" />건
+                                </div>
+                            </div>
+                            <div class="line">
+                                <label>공감 수</label>
+                                <div class="count">
+                                    <input type="text" value="10" />건
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-btn">
+                            <div class="input-wrap">
+                                <button type="button" class="btn btn-sm btn-half btn-grey">회원 탈퇴 처리</button>
+                                <button type="button" class="btn btn-sm btn-half btn-grey">회원 정보 수정</button>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-full btn-primary m-t--10">히어로즈 회원 전환</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="section">
+                        <div class="section-tit">테이블 타이틀</div>
+                        <div class="table-wrap center">
+                            <table class="table">
+                                <tr>
+                                    <th>th</th>
+                                    <th>th</th>
+                                    <th>th</th>
+                                </tr>
+                                <tr>
+                                    <td>td</td>
+                                    <td>td</td>
+                                    <td>td</td>
+                                </tr>
+                                <tr>
+                                    <td>td</td>
+                                    <td>td</td>
+                                    <td>td</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-tit">테이블 타이틀</div>
+                        <div class="table-wrap center">
+                            <table class="table">
+                                <tr>
+                                    <th>th</th>
+                                    <td>td</td>
+                                </tr>
+                                <tr>
+                                    <th>th</th>
+                                    <td>td</td>
+                                </tr>
+                                <tr>
+                                    <th>th</th>
+                                    <td>td</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function modalOpen(name){
+        name.classList.add('show')
+    }
+    function modalClose(name){
+        name.classList.remove('show')
+    }
+</script>
+
+</body>
+</html>

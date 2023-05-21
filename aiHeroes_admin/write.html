@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport">
+<head>
+    <meta charset="UTF-8">
+    <title>aiHeroes_admin</title>
+    <link href="./css/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="./css/datepicker.css" />
+    <script src="./js/datepicker.js"></script>
+    <link rel="stylesheet" href="./css/slimselect.css" />
+    <script src="./js/slimselect.min.js"></script>
+</head>
+<body>
+
+<div class="header">
+    <div class="left">
+        <h1 class="tit">AI히어로즈 관리자 시스템</h1>
+    </div>
+    <div class="right">
+        <div class="menu">
+            <button type="button" class="btn active">회원관리</button>
+            <button type="button" class="btn">프로젝트 관리</button>
+            <button type="button" class="btn">정산 관리</button>
+            <button type="button" class="btn">CS 관리</button>
+            <button type="button" class="btn">통계</button>
+        </div>
+        <div class="sub-menu">
+            <button type="button" class="btn">이용가이드</button>
+            <button type="button" class="btn alarm"></button>
+            <button type="button" class="btn user" onclick="toggleActive(this)">홍길동 매니저 님</button>
+            <div  class="sub-drop">
+                <div class="top">등급: 일반관리자</div>
+                <div class="menu-list">
+                    <button type="button" class="btn active">프로젝트 승인 요청</button>
+                    <button type="button" class="btn">프로젝트 등록 요청(12)</button>
+                    <button type="button" class="btn">신규 미팅 요청 프로젝트</button>
+                    <button type="button" class="btn">계약 요청 프로젝트</button>
+                    <button type="button" class="btn">TASK 정정 프로젝트</button>
+                    <button type="button" class="btn">정산 요청 프로젝트</button>
+                </div>
+                <button type="button" class="btn logout">로그아웃</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="container-tit">게시물 등록/수정</div>
+    <div class="section">
+        <div class="section-tit">기본 정보</div>
+        <div class="table-wrap view">
+            <table class="table">
+                <colgroup>
+                    <col width="13%" />
+                    <col width="20%" />
+                    <col width="13%" />
+                    <col width="20%" />
+                    <col width="13%" />
+                    <col width="20%" />
+                </colgroup>
+                <tr>
+                    <th>게시상태</th>
+                    <td>-</td>
+                    <th>등록일</th>
+                    <td>-</td>
+                    <th>등록자</th>
+                    <td>홍길동</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-tit">콘텐츠 정보</div>
+        <div class="table-wrap">
+            <table class="table">
+                <colgroup>
+                    <col width="13%" />
+                    <col width="37%" />
+                    <col width="13%" />
+                    <col width="37%" />
+                </colgroup>
+                <tr>
+                    <th>카테고리</th>
+                    <td colspan="3">
+                        <div class="input-wrap">
+                            <select class="input-select" disabled>
+                                <option>AI 스토리</option>
+                            </select>
+                            <select class="input-select">
+                                <option>등록 카테고리</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>소속</th>
+                    <td>
+                        <input type="text" class="input-text" placeholder="소속을 입력해 주세요" />
+                    </td>
+                    <th>연구원명</th>
+                    <td>
+                        <input type="text" class="input-text" placeholder="연구원명을 입력해 주세요" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>콘텐츠 제목</th>
+                    <td colspan="3">
+                        <input type="text" class="input-text" placeholder="제목을 입력해 주세요" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>키워드</th>
+                    <td colspan="3">
+                        <input type="text" class="input-text" placeholder="ex. #영상, #이미지, #딥러닝" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-tit">콘텐츠 상세 정보</div>
+        <div class="table-wrap">
+            <table class="table">
+                <colgroup>
+                    <col width="13%" />
+                    <col width="87%" />
+                </colgroup>
+                <tr>
+                    <th>썸네일 이미지</th>
+                    <td>
+                        <div class="input-wrap">
+                            <label class="input-file">
+                                <input type="file" />
+                                <input type="text" class="input-text" readonly placeholder="첨부파일 등록" />
+                                <span class="btn btn-sm btn-primary">파일찾기</span>
+                            </label>
+                            <button type="button" class="btn btn-sm btn-grey">삭제</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>상단배너</th>
+                    <td>
+                        <div class="input-wrap">
+                            <label class="input-file">
+                                <input type="file" />
+                                <input type="text" class="input-text" readonly placeholder="첨부파일 등록" />
+                                <span class="btn btn-sm btn-primary">파일찾기</span>
+                            </label>
+                            <button type="button" class="btn btn-sm btn-grey">삭제</button>
+                        </div>
+                        <div class="img-preview"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>콘텐츠 상세 내용</th>
+                    <td>
+                        에디터 영역
+                    </td>
+                </tr>
+                <tr>
+                    <th>첨부파일</th>
+                    <td>
+                        <div class="input-wrap">
+                            <label class="input-file">
+                                <input type="file" />
+                                <input type="text" class="input-text" readonly placeholder="첨부파일 등록" />
+                                <span class="btn btn-sm btn-primary">파일찾기</span>
+                            </label>
+                            <button type="button" class="btn btn-sm btn-grey">삭제</button>
+                        </div>
+                        <div class="input-wrap file-list">
+                            <button type="button" class="btn btn-link">첨부파일명.docx</button>
+                            <button type="button" class="btn btn-link red">삭제</button>
+                        </div>
+                        <div class="input-wrap file-list">
+                            <button type="button" class="btn btn-link">첨부파일명.docx</button>
+                            <button type="button" class="btn btn-link red">삭제</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-tit">추천 솔루션</div>
+        <div class="table-wrap">
+            <table class="table">
+                <colgroup>
+                    <col width="13%" />
+                    <col width="87%" />
+                </colgroup>
+                <tr>
+                    <th>추천 솔루션</th>
+                    <td>
+                        <div class="input-wrap">
+                            <button type="button" class="btn btn-sm btn-primary">파일찾기</button>
+                            <button type="button" class="btn btn-sm btn-grey">선택삭제</button>
+                        </div>
+                        <div class="table-wrap center m-t--5">
+                            <table class="table">
+                                <tr>
+                                    <th>
+                                        <label class="input-checkbox">
+                                            <input type="checkbox" />
+                                            <span class="box"></span>
+                                        </label>
+                                    </th>
+                                    <th>솔루션 번호</th>
+                                    <th>태스크</th>
+                                    <th>개발형태</th>
+                                    <th>산업분류</th>
+                                    <th>솔루션명</th>
+                                    <th>소유자명</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="7" class="txt-c--grey">
+                                        검색된 솔루션이 없습니다.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="input-checkbox">
+                                            <input type="checkbox" />
+                                            <span class="box"></span>
+                                        </label>
+                                    </td>
+                                    <td>asd123</td>
+                                    <td>영상, 이미지</td>
+                                    <td>API, SDK</td>
+                                    <td><button type="button" class="btn btn-link">제조/화학/에너지</button></td>
+                                    <td><button type="button" class="btn btn-link">실내 화재 감시 시스템 SaaS</button></td>
+                                    <td>클라우드브릭(주)</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-tit">기타</div>
+        <div class="table-wrap">
+            <table class="table">
+                <colgroup>
+                    <col width="13%" />
+                    <col width="37%" />
+                    <col width="13%" />
+                    <col width="37%" />
+                </colgroup>
+                <tr>
+                    <th>체크박스</th>
+                    <td>
+                        <label class="input-checkbox">
+                            <input type="checkbox" checked />
+                            <span class="box"></span>
+                            <span class="text">체크박스</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="box"></span>
+                            <span class="text">체크박스</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="box"></span>
+                            <span class="text">체크박스</span>
+                        </label>
+                        <label class="input-checkbox">
+                            <input type="checkbox" />
+                            <span class="box"></span>
+                            <span class="text">체크박스</span>
+                        </label>
+                    </td>
+                    <th>라디오</th>
+                    <td>
+                        <label class="input-radio">
+                            <input type="radio" name="radio" checked />
+                            <span class="box"></span>
+                            <span class="text">라디오</span>
+                        </label>
+                        <label class="input-radio">
+                            <input type="radio" name="radio" />
+                            <span class="box"></span>
+                            <span class="text">라디오</span>
+                        </label>
+                        <label class="input-radio">
+                            <input type="radio" name="radio" />
+                            <span class="box"></span>
+                            <span class="text">라디오</span>
+                        </label>
+                        <label class="input-radio">
+                            <input type="radio" name="radio" />
+                            <span class="box"></span>
+                            <span class="text">라디오</span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>인풋</th>
+                    <td>
+                        <div class="input-wrap">
+                            <input type="text" class="input-text" />
+                            <span>단위</span>
+                        </div>
+                    </td>
+                    <th>셀렉트</th>
+                    <td>
+                        <select class="input-select">
+                            <option>옵션1</option>
+                            <option>옵션2</option>
+                            <option>옵션3</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>데이트</th>
+                    <td>
+                        <div class="input-wrap">
+                            <input type="text" class="input-text input-date" />
+                            <span>~</span>
+                            <input type="text" class="input-text input-date" />
+                        </div>
+                    </td>
+                    <th></th>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="btn-wrap">
+            <button type="button" class="btn btn-md btn-grey">취소</button>
+            <button type="button" class="btn btn-md btn-sub">미리보기</button>
+            <button type="button" class="btn btn-md btn-primary">등록</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    var dates = document.getElementsByClassName('input-date')
+    for( var i = 0; i < dates.length; i++ ){
+        var datepicker = new Datepicker(dates[i], {
+            language:'ko',
+            format:'yyyy-mm-dd'
+        }); 
+    }
+    var selects = document.getElementsByClassName('input-select')
+    for( var i = 0; i < selects.length; i++ ){
+        new SlimSelect({
+            select: document.getElementsByClassName('input-select')[i]
+        })
+    }
+    function toggleActive(target){
+        target.classList.contains('active') ? target.classList.remove('active') : target.classList.add('active')
+    }
+</script>
+
+</body>
+</html>
