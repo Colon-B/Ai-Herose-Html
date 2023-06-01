@@ -2762,19 +2762,40 @@ input{
             }
         }
     }
+    /* 0601 변경 */
     &-img{
         display:flex;
         &--item{
             flex:1;
             margin-right:20px;
+            position:relative;
             img{
                 width:100%;
             }
             &:last-child{
                 margin-right: 0;
             }
+            .label{
+                position:absolute;
+                left:35px;
+                top:35px;
+                font-size:1.6rem;
+                color:#fff;
+                font-weight: 600;
+            }
+            .text{
+                position:absolute;
+                left:35px;
+                top:71px;
+                font-size:2.4rem;
+                color:#fff;
+                font-weight: 700;
+                line-height: 1.3;
+                text-align: left;
+            }
         }
     }
+    /* //0601변경 */
     &-stage{
         display: flex;
         .left{

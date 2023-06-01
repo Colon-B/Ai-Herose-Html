@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": ";AAiCA;;YAEY;AAOZ;;YAEY;AAuBZ;;YAEY",
-    "sources": [
-        "global.scss"
-    ],
-    "names": [],
-    "file": "global.css"
-}
+{"version":3,"sources":["global.css","global.scss"],"names":[],"mappings":"AAAA,gBAAgB;ACiChB;;WAAA;AASA;;WAAA;AAyBA;;WAAA","file":"global.css"}

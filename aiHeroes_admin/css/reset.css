@@ -9,11 +9,10 @@
 아이콘
 ***********/
 @font-face {
-  font-family: 'SUIT Variable';
+  font-family: "SUIT Variable";
   font-weight: 100 900;
   src: url("./fonts/SUIT-Variable.woff2") format("woff2-variations");
 }
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -72,7 +71,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -110,7 +109,6 @@ input[type=password] {
 }
 
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -128,5 +126,4 @@ select::-ms-expand {
 b {
   color: inherit;
   font-family: inherit;
-}
-/*# sourceMappingURL=reset.css.map */
+}/*# sourceMappingURL=reset.css.map */
